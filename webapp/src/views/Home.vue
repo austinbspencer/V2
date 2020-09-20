@@ -14,7 +14,7 @@
             {{ obj.desc }}
           </b-card-text>
           <div id="SideToggle">
-            <b-button v-b-toggle="obj.caption">Toggle Sidebar</b-button>
+            <b-button v-b-toggle="obj.caption">View Projects</b-button>
 
             <b-sidebar
               :id="obj.caption"
@@ -41,6 +41,12 @@
                 </p>
                 <b-img :src="obj.repo1" fluid thumbnail></b-img>
               </div>
+              <div class="px-3 py-2">
+                <p>
+                  {{ obj.desc2 }}
+                </p>
+                <b-img :src="obj.repo2" fluid thumbnail></b-img>
+              </div>
             </b-sidebar>
           </div>
           <!-- :href="`${loadLink(obj.link)}`" -->
@@ -65,7 +71,9 @@ export default {
         caption: "Python",
         desc: "My projects that are built with Python",
         repo1:
-          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=twitter-bot&theme=graywhite"
+          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=twitter-bot&theme=graywhite",
+        repo2:
+          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=alpaca-python&theme=graywhite"
       },
       {
         img:
@@ -74,7 +82,9 @@ export default {
         caption: "Go",
         desc: "My projects that are built with Go",
         repo1:
-          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=twitter-bot&theme=graywhite"
+          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=twitter-bot&theme=graywhite",
+        repo2:
+          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=alpaca-python&theme=graywhite"
       },
       {
         img: "Vue.js/Vue.js-Logo.wine.svg",
@@ -82,7 +92,9 @@ export default {
         caption: "Vue.js",
         desc: "My projects that implement Vue framework",
         repo1:
-          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=twitter-bot&theme=graywhite"
+          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=twitter-bot&theme=graywhite",
+        repo2:
+          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=alpaca-python&theme=graywhite"
       },
       {
         img: "Redis/Redis-Logo.wine.svg",
@@ -90,7 +102,9 @@ export default {
         caption: "Redis",
         desc: "My projects that use Redis database",
         repo1:
-          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=twitter-bot&theme=graywhite"
+          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=twitter-bot&theme=graywhite",
+        repo2:
+          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=alpaca-python&theme=graywhite"
       },
       {
         img: "Docker_(software)/Docker_(software)-Logo.wine.svg",
@@ -106,7 +120,9 @@ export default {
         caption: "C++",
         desc: "My projects that are built with C++",
         repo1:
-          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=twitter-bot&theme=graywhite"
+          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=twitter-bot&theme=graywhite",
+        repo2:
+          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=alpaca-python&theme=graywhite"
       }
     ],
     variant: "dark",
