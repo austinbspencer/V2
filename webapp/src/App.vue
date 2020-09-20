@@ -2,6 +2,7 @@
   <div id="app">
     <div id="nav">
       <top-header></top-header>
+      <!-- <side-toggle></side-toggle> -->
       <!-- <router-link to="/">Home</router-link> -->
       <!-- <router-link to="/about">About</router-link> -->
     </div>
@@ -11,10 +12,12 @@
 
 <script>
 import TopHeader from '@/components/TopHeader.vue'
+// import SideToggle from '@/components/SideToggle.vue'
 
 export default {
   components: {
-    'top-header': TopHeader
+    'top-header': TopHeader,
+    // 'side-toggle': SideToggle
   }
 }
 </script>
