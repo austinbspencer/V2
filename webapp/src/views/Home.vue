@@ -11,10 +11,10 @@
           class="mb-2"
         >
           <b-card-text>
-            {{ obj.desc }}
+            
           </b-card-text>
           <div id="SideToggle">
-            <b-button v-b-toggle="obj.caption">View Projects</b-button>
+            <b-button v-b-toggle="obj.caption" variant="info">View Projects</b-button>
 
             <b-sidebar
               :id="obj.caption"
@@ -40,12 +40,36 @@
                   {{ obj.desc }}
                 </p>
                 <b-img :src="obj.repo1" fluid thumbnail></b-img>
+                <template v-if="'repo1' in obj">
+                  <b-button  variant="outline-secondary" :href="obj.repolink1">GitHub</b-button>
+                  &nbsp;
+                  &nbsp;
+                  <b-button v-if="'livelink1' in obj"  variant="outline-primary" :href="obj.livelink1">Live</b-button>
+                </template>
               </div>
               <div class="px-3 py-2">
                 <p>
                   {{ obj.desc2 }}
                 </p>
                 <b-img :src="obj.repo2" fluid thumbnail></b-img>
+                <template v-if="'repo2' in obj">
+                  <b-button  variant="outline-secondary" :href="obj.repolink2">GitHub</b-button>
+                  &nbsp;
+                  &nbsp;
+                  <b-button v-if="'livelink2' in obj"  variant="outline-primary" :href="obj.livelink2">Live</b-button>
+                </template>
+              </div>
+              <div class="px-3 py-2">
+                <p>
+                  {{ obj.desc2 }}
+                </p>
+                <b-img :src="obj.repo3" fluid thumbnail></b-img>
+                <template v-if="'repo3' in obj">
+                  <b-button  variant="outline-secondary" :href="obj.repolink3">GitHub</b-button>
+                  &nbsp;
+                  &nbsp;
+                  <b-button v-if="'livelink3' in obj"  variant="outline-primary" :href="obj.livelink3">Live</b-button>
+                </template>
               </div>
             </b-sidebar>
           </div>
@@ -69,12 +93,22 @@ export default {
           "Python_(programming_language)/Python_(programming_language)-Logo.wine.svg",
         link: "Python/",
         caption: "Python",
-        desc: "My projects built with Python",
-        desc2: "My projects built with Python",
+        desc: "Twitter Bot",
         repo1:
           "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=twitter-bot&theme=graywhite",
+        repolink1: "https://github.com/abspen1/twitter-bot",
+        livelink1: "https://austinspencer.works/twitter-bot/",
+
+        desc2: "Algorithmic Trading",
         repo2:
-          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=alpaca-python&theme=graywhite"
+          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=alpaca-python&theme=graywhite",
+        repolink2: "https://github.com/abspen1/alpaca-python",
+
+        desc3: "Pacman Game",
+        repo3:
+        "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=PacMan-PyGame&theme=graywhite",
+        repolink3: "https://github.com/abspen1/PacMan-PyGame",
+
       },
       {
         img:
@@ -92,23 +126,25 @@ export default {
         img: "Vue.js/Vue.js-Logo.wine.svg",
         link: "JavaScript/",
         caption: "Vue.js",
-        desc: "My projects that implement Vue framework",
-        desc2: "My projects that implement Vue framework",
+        desc: "My projects built with Vue.js",
+        desc2: "My projects built with Vue.js",
         repo1:
           "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=twitter-bot&theme=graywhite",
         repo2:
-          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=alpaca-python&theme=graywhite"
+          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=alpaca-python&theme=graywhite",
+        livelink1: "novalue"
       },
       {
         img: "Redis/Redis-Logo.wine.svg",
         link: "redis/",
         caption: "Redis",
-        desc: "My projects that use Redis database",
-        desc2: "My projects that use Redis database",
+        desc: "My projects implementing Redis",
+        desc2: "My projects implementing Redis",
         repo1:
           "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=twitter-bot&theme=graywhite",
         repo2:
-          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=alpaca-python&theme=graywhite"
+          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=alpaca-python&theme=graywhite",
+        livelink1: 'novalue'
       },
       {
         img: "Docker_(software)/Docker_(software)-Logo.wine.svg",
@@ -125,8 +161,6 @@ export default {
         caption: "C++",
         desc: "My projects built with C++",
         desc2: "My projects built with C++",
-        repo1:
-          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=twitter-bot&theme=graywhite",
         repo2:
           "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=alpaca-python&theme=graywhite"
       }
@@ -151,8 +185,17 @@ export default {
     },
     loadLink(linkPath) {
       return "https://austinspencer.works/projects/" + linkPath;
+    },
+  
+    containsKey(obj, key ) {
+        return Object.keys(obj).includes(key);
+    }, 
+  },
+  computed: {
+        hasName() {
+            return this.containsKey(this.obj, 'livelink1');
+        }
     }
-  }
 };
 </script>
 
