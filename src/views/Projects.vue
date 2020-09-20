@@ -10,28 +10,36 @@
           style="max-width:20rem"
           class="mb-2"
         >
-          <b-card-text>
-            
-          </b-card-text>
+          <b-card-text> </b-card-text>
           <div id="SideToggle">
-            <b-button v-b-toggle="obj.caption" variant="info">View Projects</b-button>
+            <b-button
+              v-b-modal="obj.caption"
+              @click="show = true"
+              variant="secondary"
+              >Show Projects</b-button
+            >
 
-            <b-sidebar
+            <b-modal
               :id="obj.caption"
+              centered
               :title="obj.caption"
-              :backdrop-variant="variant"
+              :size="size"
+              header-bg-variant="info"
+              :body-bg-variant="variant"
+              footer-bg-variant="dark"
               backdrop
               shadow
             >
               <div class="px-3 py-2">
                 <b-form-group
-                  label="Backdrop variant"
-                  label-for="backdrop-variant"
+                  label="Window Size"
+                  v-model="size"
+                  :options="sizes"
                 >
                   <b-form-select
                     id="backdrop-variant"
-                    v-model="variant"
-                    :options="variants"
+                    v-model="size"
+                    :options="sizes"
                   ></b-form-select>
                 </b-form-group>
               </div>
@@ -41,10 +49,17 @@
                 </p>
                 <b-img :src="obj.repo1" fluid thumbnail></b-img>
                 <template v-if="'repo1' in obj">
-                  <b-button  variant="outline-secondary" :href="obj.repolink1">GitHub</b-button>
-                  &nbsp;
-                  &nbsp;
-                  <b-button v-if="'livelink1' in obj"  variant="outline-primary" :href="obj.livelink1">Live</b-button>
+                  &nbsp; &nbsp;
+                  <b-button variant="outline-secondary" :href="obj.repolink1"
+                    >GitHub</b-button
+                  >
+                  &nbsp; &nbsp;
+                  <b-button
+                    v-if="'livelink1' in obj"
+                    variant="outline-primary"
+                    :href="obj.livelink1"
+                    >Live</b-button
+                  >
                 </template>
               </div>
               <div class="px-3 py-2">
@@ -53,10 +68,17 @@
                 </p>
                 <b-img :src="obj.repo2" fluid thumbnail></b-img>
                 <template v-if="'repo2' in obj">
-                  <b-button  variant="outline-secondary" :href="obj.repolink2">GitHub</b-button>
-                  &nbsp;
-                  &nbsp;
-                  <b-button v-if="'livelink2' in obj"  variant="outline-primary" :href="obj.livelink2">Live</b-button>
+                  &nbsp; &nbsp;
+                  <b-button variant="outline-secondary" :href="obj.repolink2"
+                    >GitHub</b-button
+                  >
+                  &nbsp; &nbsp;
+                  <b-button
+                    v-if="'livelink2' in obj"
+                    variant="outline-primary"
+                    :href="obj.livelink2"
+                    >Live</b-button
+                  >
                 </template>
               </div>
               <div class="px-3 py-2">
@@ -65,13 +87,20 @@
                 </p>
                 <b-img :src="obj.repo3" fluid thumbnail></b-img>
                 <template v-if="'repo3' in obj">
-                  <b-button  variant="outline-secondary" :href="obj.repolink3">GitHub</b-button>
-                  &nbsp;
-                  &nbsp;
-                  <b-button v-if="'livelink3' in obj"  variant="outline-primary" :href="obj.livelink3">Live</b-button>
+                  &nbsp; &nbsp;
+                  <b-button variant="outline-secondary" :href="obj.repolink3"
+                    >GitHub</b-button
+                  >
+                  &nbsp; &nbsp;
+                  <b-button
+                    v-if="'livelink3' in obj"
+                    variant="outline-primary"
+                    :href="obj.livelink3"
+                    >Live</b-button
+                  >
                 </template>
               </div>
-            </b-sidebar>
+            </b-modal>
           </div>
           <!-- :href="`${loadLink(obj.link)}`" -->
         </b-card>
@@ -106,9 +135,8 @@ export default {
 
         desc3: "Pacman Game",
         repo3:
-        "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=PacMan-PyGame&theme=graywhite",
-        repolink3: "https://github.com/abspen1/PacMan-PyGame",
-
+          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=PacMan-PyGame&theme=graywhite",
+        repolink3: "https://github.com/abspen1/PacMan-PyGame"
       },
       {
         img:
@@ -144,7 +172,7 @@ export default {
           "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=twitter-bot&theme=graywhite",
         repo2:
           "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=alpaca-python&theme=graywhite",
-        livelink1: 'novalue'
+        livelink1: "novalue"
       },
       {
         img: "Docker_(software)/Docker_(software)-Logo.wine.svg",
@@ -165,7 +193,7 @@ export default {
           "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=alpaca-python&theme=graywhite"
       }
     ],
-    variant: "dark",
+    variant: "white",
     variants: [
       "transparent",
       "white",
@@ -177,7 +205,9 @@ export default {
       "danger",
       "warning",
       "info"
-    ]
+    ],
+    size: "lg",
+    sizes: ["sm", "md", "lg", "xl"]
   }),
   methods: {
     loadImg(imgPath) {
@@ -186,16 +216,16 @@ export default {
     loadLink(linkPath) {
       return "https://austinspencer.works/projects/" + linkPath;
     },
-  
-    containsKey(obj, key ) {
-        return Object.keys(obj).includes(key);
-    }, 
+
+    containsKey(obj, key) {
+      return Object.keys(obj).includes(key);
+    }
   },
   computed: {
-        hasName() {
-            return this.containsKey(this.obj, 'livelink1');
-        }
+    hasName() {
+      return this.containsKey(this.obj, "livelink1");
     }
+  }
 };
 </script>
 
