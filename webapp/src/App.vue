@@ -11,15 +11,15 @@
 </template>
 
 <script>
-import TopHeader from '@/components/TopHeader.vue'
+import TopHeader from "@/components/TopHeader.vue";
 // import SideToggle from '@/components/SideToggle.vue'
 
 export default {
   components: {
-    'top-header': TopHeader,
+    "top-header": TopHeader
     // 'side-toggle': SideToggle
   }
-}
+};
 </script>
 
 <style lang="scss">
