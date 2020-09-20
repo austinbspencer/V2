@@ -69,7 +69,8 @@ export default {
           "Python_(programming_language)/Python_(programming_language)-Logo.wine.svg",
         link: "Python/",
         caption: "Python",
-        desc: "My projects that are built with Python",
+        desc: "My projects built with Python",
+        desc2: "My projects built with Python",
         repo1:
           "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=twitter-bot&theme=graywhite",
         repo2:
@@ -80,7 +81,8 @@ export default {
           "Go_(programming_language)/Go_(programming_language)-Logo.wine.svg",
         link: "Go/",
         caption: "Go",
-        desc: "My projects that are built with Go",
+        desc: "My projects built with Go",
+        desc2: "My projects built with Go",
         repo1:
           "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=twitter-bot&theme=graywhite",
         repo2:
@@ -91,6 +93,7 @@ export default {
         link: "JavaScript/",
         caption: "Vue.js",
         desc: "My projects that implement Vue framework",
+        desc2: "My projects that implement Vue framework",
         repo1:
           "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=twitter-bot&theme=graywhite",
         repo2:
@@ -101,6 +104,7 @@ export default {
         link: "redis/",
         caption: "Redis",
         desc: "My projects that use Redis database",
+        desc2: "My projects that use Redis database",
         repo1:
           "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=twitter-bot&theme=graywhite",
         repo2:
@@ -110,7 +114,8 @@ export default {
         img: "Docker_(software)/Docker_(software)-Logo.wine.svg",
         link: "Docker/",
         caption: "Docker",
-        desc: "My projects that are run as Docker containers",
+        desc: "My projects that run as Docker containers",
+        desc2: "My projects that run as Docker containers",
         repo1:
           "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=twitter-bot&theme=graywhite"
       },
@@ -118,7 +123,8 @@ export default {
         img: "C%2B%2B/C%2B%2B-Logo.wine.svg",
         link: "Python/",
         caption: "C++",
-        desc: "My projects that are built with C++",
+        desc: "My projects built with C++",
+        desc2: "My projects built with C++",
         repo1:
           "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=twitter-bot&theme=graywhite",
         repo2:
