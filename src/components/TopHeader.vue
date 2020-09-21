@@ -13,8 +13,8 @@
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->
-        <!-- <b-navbar-nav class="ml-auto">
-          <b-nav-form>
+        <b-navbar-nav class="ml-auto">
+          <!-- <b-nav-form>
             <b-form-input
               size="sm"
               class="mr-sm-2"
@@ -25,28 +25,34 @@
             >
           </b-nav-form> -->
 
-        <!-- <b-nav-item-dropdown text="Lang" right>
-          <b-dropdown-item href="#">EN</b-dropdown-item>
-          <b-dropdown-item href="#">ES</b-dropdown-item>
-          <b-dropdown-item href="#">RU</b-dropdown-item>
-          <b-dropdown-item href="#">FA</b-dropdown-item>
-        </b-nav-item-dropdown>
+          <b-nav-item-dropdown text="Lang" right>
+            <template v-slot:button-content>
+              <b-icon aria-hidden="true"></b-icon> Links
+            </template>
+            <b-dropdown-item href="https://github.com/abspen1">GitHub</b-dropdown-item>
+            <b-dropdown-item href="https://www.linkedin.com/in/austin-spencer-b56a25177/">LinkedIn</b-dropdown-item>
+            <b-dropdown-item href="https://twitter.com/austinnspencer">Twitter</b-dropdown-item>
+            <b-dropdown-item href="https://www.facebook.com/austin.spencer.129/">Facebook</b-dropdown-item>
+            <b-dropdown-item href="https://instagram.com/austinspencer">Instagram</b-dropdown-item>
+          </b-nav-item-dropdown>
 
-        <b-nav-item-dropdown right> -->
-        <!-- Using 'button-content' slot -->
-        <!-- <template v-slot:button-content>
-            <em>User</em>
-          </template>
-          <b-dropdown-item href="#">Profile</b-dropdown-item>
-          <b-dropdown-item href="#">Sign Out</b-dropdown-item>
-        </b-nav-item-dropdown> -->
-        <!-- </b-navbar-nav> -->
+          <!-- Using 'button-content' slot -->
+          <!-- <b-nav-item-dropdown right>
+            <template v-slot:button-content>
+              <em>User</em>
+            </template>
+            <b-dropdown-item href="#">Profile</b-dropdown-item>
+            <b-dropdown-item href="#">Sign Out</b-dropdown-item>
+          </b-nav-item-dropdown> -->
+        </b-navbar-nav>
       </b-collapse>
     </b-navbar>
   </div>
 </template>
 
-<script></script>
+<script>
+ 
+</script>
 
 <style lang="scss" scoped>
 #nav a:hover {
