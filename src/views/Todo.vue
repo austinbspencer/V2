@@ -1,6 +1,8 @@
 <template>
   <div id="todo">
-    <h1>API Access</h1>
+    <br />
+    <h1>Todo List</h1>
+    <br />
     <todo-component></todo-component>
   </div>
 </template>
