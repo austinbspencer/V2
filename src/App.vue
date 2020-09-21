@@ -12,6 +12,7 @@
 
 <script>
 import TopHeader from "@/components/TopHeader.vue";
+window.axios = require("axios");
 // import SideToggle from '@/components/SideToggle.vue'
 
 export default {

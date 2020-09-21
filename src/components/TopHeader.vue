@@ -10,6 +10,7 @@
           <b-nav-item to="/">Home</b-nav-item>
           <b-nav-item to="/projects">Projects</b-nav-item>
           <b-nav-item to="/about">About</b-nav-item>
+          <b-nav-item to="/todos">Todo</b-nav-item>
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->
@@ -27,7 +28,7 @@
 
           <b-nav-item-dropdown text="Lang" right>
             <template v-slot:button-content>
-              <b-icon aria-hidden="true"></b-icon> Links
+              <em aria-hidden="true"></em> Links
             </template>
             <b-dropdown-item href="https://github.com/abspen1"
               >GitHub</b-dropdown-item
