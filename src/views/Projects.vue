@@ -1,7 +1,7 @@
 <template>
   <b-container>
     <b-row align-v="center">
-      <b-col md="3" v-for="(obj, key) in portfolioJSON" :key="key">
+      <b-col md="4" v-for="(obj, key) in portfolioJSON" :key="key">
         <b-card
           :img-src="`${loadImg(obj.img)}`"
           img-alt="Job-info"
@@ -26,12 +26,14 @@
               :size="size"
               header-bg-variant="info"
               :body-bg-variant="variant"
-              body-text-variant="primary"
+              :body-text-variant="primary"
               footer-bg-variant="dark"
               backdrop
               shadow
             >
               <div class="px-3 py-2">
+                <h1>Interactive Styles!!</h1>
+                <!-- Window Size -->
                 <b-form-group
                   label="Window Size (Browser Only)"
                   v-model="size"
@@ -41,6 +43,30 @@
                     id="backdrop-variant"
                     v-model="size"
                     :options="sizes"
+                  ></b-form-select>
+                </b-form-group>
+                <!-- Background Color -->
+                <b-form-group
+                  label="Background Color"
+                  v-model="variant"
+                  :options="variants"
+                >
+                  <b-form-select
+                    id="backdrop-variant"
+                    v-model="variant"
+                    :options="variants"
+                  ></b-form-select>
+                </b-form-group>
+                <!-- Text Color -->
+                <b-form-group
+                  label="Text Color"
+                  v-model="primary"
+                  :options="variants"
+                >
+                  <b-form-select
+                    id="backdrop-variant"
+                    v-model="primary"
+                    :options="variants"
                   ></b-form-select>
                 </b-form-group>
               </div>
@@ -282,8 +308,8 @@ export default {
       }
     ],
     variant: "white",
+    primary: "primary",
     variants: [
-      "transparent",
       "white",
       "light",
       "dark",
