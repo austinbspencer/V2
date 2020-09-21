@@ -26,6 +26,7 @@
               :size="size"
               header-bg-variant="info"
               :body-bg-variant="variant"
+              body-text-variant="primary"
               footer-bg-variant="dark"
               backdrop
               shadow
@@ -51,23 +52,28 @@
                   </p>
                   <b-img
                     v-if="'repo1' in obj"
-                    :src="obj.repo1"
+                    :src="`${loadRepoStats(obj.repo1)}`"
                     fluid
                     thumbnail
                   ></b-img>
-                  <template v-if="'repo1' in obj">
-                    &nbsp; &nbsp; &nbsp; &nbsp;
-                    <b-button variant="outline-secondary" :href="obj.repolink1"
-                      >GitHub</b-button
-                    >
-                    &nbsp; &nbsp; &nbsp; &nbsp;
-                    <b-button
-                      v-if="'livelink1' in obj"
-                      variant="outline-primary"
-                      :href="obj.livelink1"
-                      >Live</b-button
-                    >
-                  </template>
+                  <br>
+                  <br>
+                  <div class="w-75">
+                    <template v-if="'livelink1' in obj">
+                      <b-dropdown id="dropdown-1" text="Project Links" size="md" variant="outline-secondary" class="m-md-2">
+                        <b-dropdown-item :href="`${loadRepo(obj.repo1)}`">GitHub</b-dropdown-item>
+                        <b-dropdown-item :href="obj.livelink1">Live</b-dropdown-item>
+                      </b-dropdown>
+                    </template>
+                    <template v-else>
+                      <b-button
+                        
+                        variant="outline-secondary"
+                        :href="`${loadRepo(obj.repo1)}`"
+                        >GitHub</b-button
+                      >
+                    </template>
+                  </div>
                 </div>
               </template>
               <!-- Second project template -->
@@ -78,23 +84,28 @@
                   </p>
                   <b-img
                     v-if="'repo2' in obj"
-                    :src="obj.repo2"
+                    :src="`${loadRepoStats(obj.repo2)}`"
                     fluid
                     thumbnail
                   ></b-img>
-                  <template v-if="'repo2' in obj">
-                    &nbsp; &nbsp; &nbsp; &nbsp;
-                    <b-button variant="outline-secondary" :href="obj.repolink2"
-                      >GitHub</b-button
-                    >
-                    &nbsp; &nbsp; &nbsp; &nbsp;
-                    <b-button
-                      v-if="'livelink2' in obj"
-                      variant="outline-primary"
-                      :href="obj.livelink2"
-                      >Live</b-button
-                    >
-                  </template>
+                  <br>
+                  <br>
+                  <div class="w-75">
+                    <template v-if="'livelink2' in obj">
+                      <b-dropdown id="dropdown-1" text="Project Links" size="md" variant="outline-secondary" class="m-md-2">
+                        <b-dropdown-item :href="`${loadRepo(obj.repo2)}`">GitHub</b-dropdown-item>
+                        <b-dropdown-item :href="obj.livelink2">Live</b-dropdown-item>
+                      </b-dropdown>
+                    </template>
+                    <template v-else>
+                      <b-button
+                        
+                        variant="outline-secondary"
+                        :href="`${loadRepo(obj.repo2)}`"
+                        >GitHub</b-button
+                      >
+                    </template>
+                  </div>
                 </div>
               </template>
               <!-- 3rd project area -->
@@ -105,23 +116,28 @@
                   </p>
                   <b-img
                     v-if="'repo3' in obj"
-                    :src="obj.repo3"
+                    :src="`${loadRepoStats(obj.repo3)}`"
                     fluid
                     thumbnail
                   ></b-img>
-                  <template v-if="'repo3' in obj">
-                    &nbsp; &nbsp; &nbsp; &nbsp;
-                    <b-button variant="outline-secondary" :href="obj.repolink3"
-                      >GitHub</b-button
-                    >
-                    &nbsp; &nbsp; &nbsp; &nbsp;
-                    <b-button
-                      v-if="'livelink3' in obj"
-                      variant="outline-primary"
-                      :href="obj.livelink3"
-                      >Live</b-button
-                    >
-                  </template>
+                  <br>
+                  <br>
+                  <div class="w-75">
+                    <template v-if="'livelink3' in obj">
+                      <b-dropdown id="dropdown-1" text="Project Links" size="md" variant="outline-secondary" class="m-md-2">
+                        <b-dropdown-item :href="`${loadRepo(obj.repo3)}`">GitHub</b-dropdown-item>
+                        <b-dropdown-item :href="obj.livelink3">Live</b-dropdown-item>
+                      </b-dropdown>
+                    </template>
+                    <template v-else-if="`repo3` in obj">
+                      <b-button
+                        
+                        variant="outline-secondary"
+                        :href="`${loadRepo(obj.repo3)}`"
+                        >GitHub</b-button
+                      >
+                    </template>
+                  </div>
                 </div>
               </template>
               <!-- Footer template -->
@@ -169,20 +185,14 @@ export default {
         link: "Python/",
         caption: "Python",
         desc: "Twitter Bot",
-        repo1:
-          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=twitter-bot&theme=default_repocard",
-        repolink1: "https://github.com/abspen1/twitter-bot",
+        repo1: "twitter-bot",
         livelink1: "https://austinspencer.works/twitter-bot/",
 
         desc2: "Algorithmic Trading",
-        repo2:
-          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=alpaca-python&theme=default_repocard",
-        repolink2: "https://github.com/abspen1/alpaca-python",
+        repo2: "alpaca-python",
 
         desc3: "Pacman Game",
-        repo3:
-          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=PacMan-PyGame&theme=default_repocard",
-        repolink3: "https://github.com/abspen1/PacMan-PyGame"
+        repo3: "PacMan-PyGame"
       },
       {
         img:
@@ -190,34 +200,24 @@ export default {
         link: "Go/",
         caption: "Go",
         desc: "My website back-end built with Go",
-        repo1:
-          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=go-backend&theme=default_repocard",
-        repolink1: "https://github.com/abspen1/go-backend",
+        repo1: "go-backend",
 
         desc2: "Algorithmic Trading",
-        repo2:
-          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=go-trading-algo&theme=default_repocard",
-        repolink2: "https://github.com/abspen1/go-trading-algo"
+        repo2: "go-trading-algo"
       },
       {
         img: "Vue.js/Vue.js-Logo.wine.svg",
         link: "JavaScript/",
         caption: "Vue.js",
         desc: "This website!",
-        repo1:
-          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=BootstrapVue-website&theme=default_repocard",
-        repolink1: "https://github.com/abspen1/BootstrapVue-website",
+        repo1: "BootstrapVue-website",
 
         desc2: "Hangman Game",
-        repo2:
-          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=hangman-js&theme=default_repocard",
-        repolink2: "https://github.com/abspen1/hangman-js",
+        repo2: "hangman-js",
         livelink2: "https://austinspencer.works/hangman-js/",
 
         desc3: "Website V1",
-        repo3:
-          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=abspen1.github.io&theme=default_repocard",
-        repolink3: "https://github.com/abspen1/abspen1.github.io",
+        repo3: "abspen1.github.io",
         livelink3: "https://austinspencer.works/"
       },
       {
@@ -225,35 +225,25 @@ export default {
         link: "redis/",
         caption: "Redis",
         desc: "Twitter Bot",
-        repo1:
-          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=twitter-bot&theme=default_repocard",
-        repolink1: "https://github.com/twitter-bot",
+        repo1: "twitter-bot",
 
         desc2: "My website back-end built with Go",
-        repo2:
-          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=go-backend&theme=default_repocard",
-        repolink2: "https://github.com/go-backend",
+        repo2: "go-backend",
 
-        desc3: "Most of my projects are built with Redis database"
+        desc3: "Most of my projects are built with Redis database. Check out more of my open-sourced projects on my GitHub!"
       },
       {
         img: "Docker_(software)/Docker_(software)-Logo.wine.svg",
         link: "Docker/",
         caption: "Docker",
         desc: "Twitter Bot",
-        repo1:
-          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=twitter-bot&theme=default_repocard",
-        repolink1: "https://github.com/twitter-bot",
+        repo1: "twitter-bot",
 
         desc2: "My website back-end built with Go",
-        repo2:
-          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=go-backend&theme=default_repocard",
-        repolink2: "https://github.com/go-backend",
+        repo2: "go-backend",
 
         desc3: "Demo of using Docker with several lanuages",
-        repo3:
-          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=docker-demo&theme=default_repocard",
-        repolink3: "https://github.com/docker-demo"
+        repo3: "docker-demo"
       },
       {
         img: "C%2B%2B/C%2B%2B-Logo.wine.svg",
@@ -288,6 +278,9 @@ export default {
     },
     loadRepo(repoPath) {
       return "https://github.com/abspen1/" + repoPath;
+    },
+    loadRepoStats(repoPath) {
+      return "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=" + repoPath + "&theme=default_repocard";
     }
   }
 };
