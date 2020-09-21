@@ -1,3 +1,3 @@
 module.exports = {
-  publicPath: "/BootstrapVue-website/"
+  publicPath: "/V2/"
 };
