@@ -1,6 +1,6 @@
 <template>
   <div id="todo">
-    <b-row class="submit-item">
+    <!-- <b-row class="submit-item">
       <b-col sm="2"></b-col>
       <b-col sm="8">
         <form>
@@ -9,7 +9,7 @@
         </form>
       </b-col>
       <b-col sm="2"></b-col>
-    </b-row>
+    </b-row> -->
     <br />
     <br />
     <b-row class="todo-item" v-for="(obj, key) in posts" :key="key">
@@ -45,27 +45,15 @@
 import axios from "axios";
 
 export default {
-  data() {
-    return {
-      posts: []
-    };
-  },
-
+  data: () => ({
+    posts: []
+  }),
   // Fetches posts when the component is created.
   created() {
     axios
       .get("https://guldentech.com/austinapi/todos")
       .then(res => (this.posts = res.data))
       .catch(err => console.log(err));
-
-    // async / await version (created() becomes async created())
-    //
-    // try {
-    //   const response = await axios.get(`http://jsonplaceholder.typicode.com/posts`)
-    //   this.posts = response.data
-    // } catch (e) {
-    //   this.errors.push(e)
-    // }
   }
 };
 </script>
