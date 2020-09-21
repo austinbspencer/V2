@@ -272,7 +272,7 @@ export default {
         link: "JavaScript/",
         caption: "Vue.js",
         desc: "This website!",
-        repo1: "BootstrapVue-website",
+        repo1: "V2",
 
         desc2: "Hangman Game",
         repo2: "hangman-js",
