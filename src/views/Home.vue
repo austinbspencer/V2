@@ -1,5 +1,13 @@
 <template>
-  <div class="home">
-    <h1>This is a home page test</h1>
+  <div
+    class="w-full"
+    :style="{ backgroundImage: `url(https://vuejs.org/images/logo.png)` }"
+  >
+    <p> Hello </p>
+  
   </div>
 </template>
+
+<script>
+
+</script>
