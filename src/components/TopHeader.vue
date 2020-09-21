@@ -29,11 +29,22 @@
             <template v-slot:button-content>
               <b-icon aria-hidden="true"></b-icon> Links
             </template>
-            <b-dropdown-item href="https://github.com/abspen1">GitHub</b-dropdown-item>
-            <b-dropdown-item href="https://www.linkedin.com/in/austin-spencer-b56a25177/">LinkedIn</b-dropdown-item>
-            <b-dropdown-item href="https://twitter.com/austinnspencer">Twitter</b-dropdown-item>
-            <b-dropdown-item href="https://www.facebook.com/austin.spencer.129/">Facebook</b-dropdown-item>
-            <b-dropdown-item href="https://instagram.com/austinspencer">Instagram</b-dropdown-item>
+            <b-dropdown-item href="https://github.com/abspen1"
+              >GitHub</b-dropdown-item
+            >
+            <b-dropdown-item
+              href="https://www.linkedin.com/in/austin-spencer-b56a25177/"
+              >LinkedIn</b-dropdown-item
+            >
+            <b-dropdown-item href="https://twitter.com/austinnspencer"
+              >Twitter</b-dropdown-item
+            >
+            <b-dropdown-item href="https://www.facebook.com/austin.spencer.129/"
+              >Facebook</b-dropdown-item
+            >
+            <b-dropdown-item href="https://instagram.com/austinspencer"
+              >Instagram</b-dropdown-item
+            >
           </b-nav-item-dropdown>
 
           <!-- Using 'button-content' slot -->
@@ -50,9 +61,7 @@
   </div>
 </template>
 
-<script>
- 
-</script>
+<script></script>
 
 <style lang="scss" scoped>
 #nav a:hover {
