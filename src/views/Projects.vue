@@ -221,7 +221,7 @@
         </b-card>
       </b-col>
     </b-row>
-    <br>
+    <br />
     <b-button
       size="lg"
       variant="outline-success"
