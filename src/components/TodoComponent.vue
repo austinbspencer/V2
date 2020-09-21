@@ -36,7 +36,7 @@
           </template>
       </b-col>
       <b-col sm="2">
-          <button variant="danger">x</button>
+          <button class="del">x</button>
       </b-col>
     </b-row>
   </div>
@@ -78,6 +78,6 @@ export default {
         padding: 5px 9px;
         /* border-radius: 50%; */
         cursor: pointer;
-        float: right;
+        /* float: right; */
     }
 </style>
