@@ -221,6 +221,15 @@
         </b-card>
       </b-col>
     </b-row>
+    <br>
+    <b-button
+      size="lg"
+      variant="outline-success"
+      class="float-center"
+      href="https://austinspencer.works/next-project/"
+    >
+      Project Ideas
+    </b-button>
   </b-container>
 </template>
 
@@ -279,6 +288,7 @@ export default {
         caption: "Redis",
         desc: "Twitter Bot",
         repo1: "twitter-bot",
+        livelink1: "https://austinspencer.works/twitter-bot",
 
         desc2: "My website back-end built with Go",
         repo2: "go-backend",
@@ -292,6 +302,7 @@ export default {
         caption: "Docker",
         desc: "Twitter Bot",
         repo1: "twitter-bot",
+        livelink1: "https://austinspencer.works/twitter-bot",
 
         desc2: "My website back-end built with Go",
         repo2: "go-backend",
