@@ -76,7 +76,7 @@
                 size="sm"
                 variant="outline-dark"
                 class="float-right"
-                href="https://austinspencer.works/FantasyTwitter/"
+                href="https://austinspencer.works/Fantasy-Twitter/"
               >
                 Webpage
               </b-button>
