@@ -380,4 +380,7 @@ p.card-text {
 .b-sidebar {
   width: 500px;
 }
+.custom-select {
+  width: 33%;
+}
 </style>
