@@ -56,18 +56,27 @@
                     fluid
                     thumbnail
                   ></b-img>
-                  <br>
-                  <br>
+                  <br />
+                  <br />
                   <div class="w-75">
                     <template v-if="'livelink1' in obj">
-                      <b-dropdown id="dropdown-1" text="Project Links" size="md" variant="outline-secondary" class="m-md-2">
-                        <b-dropdown-item :href="`${loadRepo(obj.repo1)}`">GitHub</b-dropdown-item>
-                        <b-dropdown-item :href="obj.livelink1">Live</b-dropdown-item>
+                      <b-dropdown
+                        id="dropdown-1"
+                        text="Project Links"
+                        size="md"
+                        variant="outline-secondary"
+                        class="m-md-2"
+                      >
+                        <b-dropdown-item :href="`${loadRepo(obj.repo1)}`"
+                          >GitHub</b-dropdown-item
+                        >
+                        <b-dropdown-item :href="obj.livelink1"
+                          >Live</b-dropdown-item
+                        >
                       </b-dropdown>
                     </template>
                     <template v-else>
                       <b-button
-                        
                         variant="outline-secondary"
                         :href="`${loadRepo(obj.repo1)}`"
                         >GitHub</b-button
@@ -88,18 +97,27 @@
                     fluid
                     thumbnail
                   ></b-img>
-                  <br>
-                  <br>
+                  <br />
+                  <br />
                   <div class="w-75">
                     <template v-if="'livelink2' in obj">
-                      <b-dropdown id="dropdown-1" text="Project Links" size="md" variant="outline-secondary" class="m-md-2">
-                        <b-dropdown-item :href="`${loadRepo(obj.repo2)}`">GitHub</b-dropdown-item>
-                        <b-dropdown-item :href="obj.livelink2">Live</b-dropdown-item>
+                      <b-dropdown
+                        id="dropdown-1"
+                        text="Project Links"
+                        size="md"
+                        variant="outline-secondary"
+                        class="m-md-2"
+                      >
+                        <b-dropdown-item :href="`${loadRepo(obj.repo2)}`"
+                          >GitHub</b-dropdown-item
+                        >
+                        <b-dropdown-item :href="obj.livelink2"
+                          >Live</b-dropdown-item
+                        >
                       </b-dropdown>
                     </template>
                     <template v-else>
                       <b-button
-                        
                         variant="outline-secondary"
                         :href="`${loadRepo(obj.repo2)}`"
                         >GitHub</b-button
@@ -120,18 +138,27 @@
                     fluid
                     thumbnail
                   ></b-img>
-                  <br>
-                  <br>
+                  <br />
+                  <br />
                   <div class="w-75">
                     <template v-if="'livelink3' in obj">
-                      <b-dropdown id="dropdown-1" text="Project Links" size="md" variant="outline-secondary" class="m-md-2">
-                        <b-dropdown-item :href="`${loadRepo(obj.repo3)}`">GitHub</b-dropdown-item>
-                        <b-dropdown-item :href="obj.livelink3">Live</b-dropdown-item>
+                      <b-dropdown
+                        id="dropdown-1"
+                        text="Project Links"
+                        size="md"
+                        variant="outline-secondary"
+                        class="m-md-2"
+                      >
+                        <b-dropdown-item :href="`${loadRepo(obj.repo3)}`"
+                          >GitHub</b-dropdown-item
+                        >
+                        <b-dropdown-item :href="obj.livelink3"
+                          >Live</b-dropdown-item
+                        >
                       </b-dropdown>
                     </template>
                     <template v-else-if="`repo3` in obj">
                       <b-button
-                        
                         variant="outline-secondary"
                         :href="`${loadRepo(obj.repo3)}`"
                         >GitHub</b-button
@@ -230,7 +257,8 @@ export default {
         desc2: "My website back-end built with Go",
         repo2: "go-backend",
 
-        desc3: "Most of my projects are built with Redis database. Check out more of my open-sourced projects on my GitHub!"
+        desc3:
+          "Most of my projects are built with Redis database. Check out more of my open-sourced projects on my GitHub!"
       },
       {
         img: "Docker_(software)/Docker_(software)-Logo.wine.svg",
@@ -280,7 +308,11 @@ export default {
       return "https://github.com/abspen1/" + repoPath;
     },
     loadRepoStats(repoPath) {
-      return "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=" + repoPath + "&theme=default_repocard";
+      return (
+        "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=" +
+        repoPath +
+        "&theme=default_repocard"
+      );
     }
   }
 };
