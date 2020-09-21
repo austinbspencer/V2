@@ -30,123 +30,121 @@
               backdrop
               shadow
             >
-              <div class="px-3 py-2">
-                <b-form-group
-                  label="Window Size (Browser Only)"
-                  v-model="size"
-                  :options="sizes"
-                >
-                  <b-form-select
-                    id="backdrop-variant"
-                    v-model="size"
-                    :options="sizes"
-                  ></b-form-select>
-                </b-form-group>
-              </div>
-              <!-- First project template -->
-              <template v-if="'desc' in obj">
-                <div class="px-3 py-2">
-                  <p>
-                    {{ obj.desc }}
-                  </p>
-                  <b-img
-                    v-if="'repo1' in obj"
-                    :src="obj.repo1"
-                    fluid
-                    thumbnail
-                  ></b-img>
-                  <template v-if="'repo1' in obj">
-                    &nbsp; &nbsp; &nbsp; &nbsp;
-                    <b-button variant="outline-secondary" :href="obj.repolink1"
-                      >GitHub</b-button
+              <b-row align-v="center">
+                <b-col>
+                  <div class="px-3 py-2">
+                    <b-form-group
+                      label="Window Size (Browser Only)"
+                      v-model="size"
+                      :options="sizes"
                     >
-                    &nbsp; &nbsp; &nbsp; &nbsp;
-                    <b-button
-                      v-if="'livelink1' in obj"
-                      variant="outline-primary"
-                      :href="obj.livelink1"
-                      >Live</b-button
-                    >
+                      <b-form-select
+                        id="backdrop-variant"
+                        v-model="size"
+                        :options="sizes"
+                      ></b-form-select>
+                    </b-form-group>
+                  </div>
+                  <!-- First project template -->
+                  <b-card tag="article" style="max-width:20rem" class="mb-2">
+                    <div class="px-3 py-2">
+                      <b-img
+                        v-if="'repo1' in obj"
+                        :src="obj.repo1"
+                        fluid
+                        thumbnail
+                      ></b-img>
+                    </div>
+                    <b-card-footer>
+                      <b-button
+                          v-if="'repo1' in obj"
+                          variant="outline-secondary"
+                          :href="obj.repolink1"
+                          >GitHub</b-button
+                        >
+                        <b-button
+                          v-if="'livelink1' in obj"
+                          variant="outline-primary"
+                          :href="obj.livelink1"
+                          >Live</b-button
+                        >
+                    </b-card-footer>
+                  </b-card>
+                  <!-- Second project template -->
+                  <template v-if="'desc2' in obj">
+                    <div class="px-3 py-2">
+                      <p>
+                        {{ obj.desc2 }}
+                      </p>
+                      <b-img
+                        v-if="'repo2' in obj"
+                        :src="obj.repo2"
+                        fluid
+                        thumbnail
+                      ></b-img>
+                      <template v-if="'repo2' in obj">
+                        <b-button variant="outline-secondary" :href="obj.repolink2"
+                          >GitHub</b-button
+                        >
+                        <b-button
+                          v-if="'livelink2' in obj"
+                          variant="outline-primary"
+                          :href="obj.livelink2"
+                          >Live</b-button
+                        >
+                      </template>
+                    </div>
                   </template>
-                </div>
-              </template>
-              <!-- Second project template -->
-              <template v-if="'desc2' in obj">
-                <div class="px-3 py-2">
-                  <p>
-                    {{ obj.desc2 }}
-                  </p>
-                  <b-img
-                    v-if="'repo2' in obj"
-                    :src="obj.repo2"
-                    fluid
-                    thumbnail
-                  ></b-img>
-                  <template v-if="'repo2' in obj">
-                    &nbsp; &nbsp; &nbsp; &nbsp;
-                    <b-button variant="outline-secondary" :href="obj.repolink2"
-                      >GitHub</b-button
-                    >
-                    &nbsp; &nbsp; &nbsp; &nbsp;
-                    <b-button
-                      v-if="'livelink2' in obj"
-                      variant="outline-primary"
-                      :href="obj.livelink2"
-                      >Live</b-button
-                    >
+                  <!-- 3rd project area -->
+                  <template v-if="'desc3' in obj">
+                    <div class="px-3 py-2">
+                      <p>
+                        {{ obj.desc3 }}
+                      </p>
+                      <b-img
+                        v-if="'repo3' in obj"
+                        :src="obj.repo3"
+                        fluid
+                        thumbnail
+                      ></b-img>
+                      <template v-if="'repo3' in obj">
+                        <b-button variant="outline-secondary" :href="obj.repolink3"
+                          >GitHub</b-button
+                        >
+                        <b-button
+                          v-if="'livelink3' in obj"
+                          variant="outline-primary"
+                          :href="obj.livelink3"
+                          >Live</b-button
+                        >
+                      </template>
+                    </div>
                   </template>
-                </div>
-              </template>
-              <!-- 3rd project area -->
-              <template v-if="'desc3' in obj">
-                <div class="px-3 py-2">
-                  <p>
-                    {{ obj.desc3 }}
-                  </p>
-                  <b-img
-                    v-if="'repo3' in obj"
-                    :src="obj.repo3"
-                    fluid
-                    thumbnail
-                  ></b-img>
-                  <template v-if="'repo3' in obj">
-                    &nbsp; &nbsp; &nbsp; &nbsp;
-                    <b-button variant="outline-secondary" :href="obj.repolink3"
-                      >GitHub</b-button
-                    >
-                    &nbsp; &nbsp; &nbsp; &nbsp;
-                    <b-button
-                      v-if="'livelink3' in obj"
-                      variant="outline-primary"
-                      :href="obj.livelink3"
-                      >Live</b-button
-                    >
+                  <!-- Footer template -->
+                  <template v-slot:modal-footer="{ close }">
+                    <!-- Button with custom close trigger value -->
+                    <div class="w-100">
+                      <b-button
+                        size="sm"
+                        variant="outline-secondary"
+                        class="float-left"
+                        href="https://github.com/abspen1"
+                      >
+                        GitHub
+                      </b-button>
+                      <!-- Emulate built in modal footer ok and cancel button actions -->
+                      <b-button
+                        size="sm"
+                        variant="danger"
+                        class="float-right"
+                        @click="close()"
+                      >
+                        Close
+                      </b-button>
+                    </div>
                   </template>
-                </div>
-              </template>
-              <!-- Footer template -->
-              <template v-slot:modal-footer="{ close }">
-                <!-- Button with custom close trigger value -->
-                <div class="w-100">
-                  <b-button
-                    size="sm"
-                    variant="outline-secondary"
-                    class="float-left"
-                    href="https://github.com/abspen1"
-                  >
-                    GitHub
-                  </b-button>
-                  <!-- Emulate built in modal footer ok and cancel button actions -->
-                  <b-button
-                    size="sm"
-                    variant="danger"
-                    class="float-right"
-                    @click="close()"
-                  >
-                    Close
-                  </b-button>
-                </div>
-              </template>
+                </b-col>
+              </b-row>
             </b-modal>
           </div>
         </b-card>
@@ -171,8 +169,8 @@ export default {
         desc: "Twitter Bot",
         repo1:
           "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=twitter-bot&theme=default_repocard",
-        repolink1: "https://github.com/abspen1/twitter-bot",
-        livelink1: "https://austinspencer.works/twitter-bot/",
+        repolink1: "twitter-bot",
+        livelink1: "twitter-bot/",
 
         desc2: "Algorithmic Trading",
         repo2:
@@ -243,7 +241,7 @@ export default {
         desc: "Twitter Bot",
         repo1:
           "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=twitter-bot&theme=default_repocard",
-        repolink1: "https://github.com/twitter-bot",
+        repolink1: "twitter-bot",
 
         desc2: "My website back-end built with Go",
         repo2:
@@ -286,14 +284,8 @@ export default {
     loadLink(linkPath) {
       return "https://austinspencer.works/projects/" + linkPath;
     },
-
-    containsKey(obj, key) {
-      return Object.keys(obj).includes(key);
-    }
-  },
-  computed: {
-    hasName() {
-      return this.containsKey(this.obj, "livelink1");
+    loadRepo(repoPath) {
+      return "https://github.com/abspen1/" + repoPath;
     }
   }
 };
