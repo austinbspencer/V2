@@ -43,66 +43,112 @@
                   ></b-form-select>
                 </b-form-group>
               </div>
-              <div class="px-3 py-2">
-                <p>
-                  {{ obj.desc }}
-                </p>
-                <b-img :src="obj.repo1" fluid thumbnail></b-img>
-                <template v-if="'repo1' in obj">
-                  &nbsp; &nbsp;
-                  <b-button variant="outline-secondary" :href="obj.repolink1"
-                    >GitHub</b-button
-                  >
-                  &nbsp; &nbsp;
+              <!-- First project template -->
+              <template v-if="'desc' in obj">
+                <div class="px-3 py-2">
+                  <p>
+                    {{ obj.desc }}
+                  </p>
+                  <b-img
+                    v-if="'repo1' in obj"
+                    :src="obj.repo1"
+                    fluid
+                    thumbnail
+                  ></b-img>
+                  <template v-if="'repo1' in obj">
+                    &nbsp; &nbsp; &nbsp; &nbsp;
+                    <b-button variant="outline-secondary" :href="obj.repolink1"
+                      >GitHub</b-button
+                    >
+                    &nbsp; &nbsp; &nbsp; &nbsp;
+                    <b-button
+                      v-if="'livelink1' in obj"
+                      variant="outline-primary"
+                      :href="obj.livelink1"
+                      >Live</b-button
+                    >
+                  </template>
+                </div>
+              </template>
+              <!-- Second project template -->
+              <template v-if="'desc2' in obj">
+                <div class="px-3 py-2">
+                  <p>
+                    {{ obj.desc2 }}
+                  </p>
+                  <b-img
+                    v-if="'repo2' in obj"
+                    :src="obj.repo2"
+                    fluid
+                    thumbnail
+                  ></b-img>
+                  <template v-if="'repo2' in obj">
+                    &nbsp; &nbsp; &nbsp; &nbsp;
+                    <b-button variant="outline-secondary" :href="obj.repolink2"
+                      >GitHub</b-button
+                    >
+                    &nbsp; &nbsp; &nbsp; &nbsp;
+                    <b-button
+                      v-if="'livelink2' in obj"
+                      variant="outline-primary"
+                      :href="obj.livelink2"
+                      >Live</b-button
+                    >
+                  </template>
+                </div>
+              </template>
+              <!-- 3rd project area -->
+              <template v-if="'desc3' in obj">
+                <div class="px-3 py-2">
+                  <p>
+                    {{ obj.desc3 }}
+                  </p>
+                  <b-img
+                    v-if="'repo3' in obj"
+                    :src="obj.repo3"
+                    fluid
+                    thumbnail
+                  ></b-img>
+                  <template v-if="'repo3' in obj">
+                    &nbsp; &nbsp; &nbsp; &nbsp;
+                    <b-button variant="outline-secondary" :href="obj.repolink3"
+                      >GitHub</b-button
+                    >
+                    &nbsp; &nbsp; &nbsp; &nbsp;
+                    <b-button
+                      v-if="'livelink3' in obj"
+                      variant="outline-primary"
+                      :href="obj.livelink3"
+                      >Live</b-button
+                    >
+                  </template>
+                </div>
+              </template>
+              <!-- Footer template -->
+              <template v-slot:modal-footer="{ close }">
+                <!-- Button with custom close trigger value -->
+                <div class="w-100">
                   <b-button
-                    v-if="'livelink1' in obj"
-                    variant="outline-primary"
-                    :href="obj.livelink1"
-                    >Live</b-button
+                    size="sm"
+                    variant="outline-secondary"
+                    class="float-left"
+                    href="https://github.com/abspen1"
                   >
-                </template>
-              </div>
-              <div class="px-3 py-2">
-                <p>
-                  {{ obj.desc2 }}
-                </p>
-                <b-img :src="obj.repo2" fluid thumbnail></b-img>
-                <template v-if="'repo2' in obj">
-                  &nbsp; &nbsp;
-                  <b-button variant="outline-secondary" :href="obj.repolink2"
-                    >GitHub</b-button
-                  >
-                  &nbsp; &nbsp;
+                    GitHub
+                  </b-button>
+                  <!-- Emulate built in modal footer ok and cancel button actions -->
                   <b-button
-                    v-if="'livelink2' in obj"
-                    variant="outline-primary"
-                    :href="obj.livelink2"
-                    >Live</b-button
+                    size="sm"
+                    variant="danger"
+                    class="float-right"
+                    @click="close()"
                   >
-                </template>
-              </div>
-              <div class="px-3 py-2">
-                <p>
-                  {{ obj.desc2 }}
-                </p>
-                <b-img :src="obj.repo3" fluid thumbnail></b-img>
-                <template v-if="'repo3' in obj">
-                  &nbsp; &nbsp;
-                  <b-button variant="outline-secondary" :href="obj.repolink3"
-                    >GitHub</b-button
-                  >
-                  &nbsp; &nbsp;
-                  <b-button
-                    v-if="'livelink3' in obj"
-                    variant="outline-primary"
-                    :href="obj.livelink3"
-                    >Live</b-button
-                  >
-                </template>
-              </div>
+                    Close
+                  </b-button>
+                </div>
+              </template>
             </b-modal>
           </div>
-          <!-- :href="`${loadLink(obj.link)}`" -->
         </b-card>
       </b-col>
     </b-row>
@@ -124,18 +170,18 @@ export default {
         caption: "Python",
         desc: "Twitter Bot",
         repo1:
-          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=twitter-bot&theme=graywhite",
+          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=twitter-bot&theme=default_repocard",
         repolink1: "https://github.com/abspen1/twitter-bot",
         livelink1: "https://austinspencer.works/twitter-bot/",
 
         desc2: "Algorithmic Trading",
         repo2:
-          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=alpaca-python&theme=graywhite",
+          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=alpaca-python&theme=default_repocard",
         repolink2: "https://github.com/abspen1/alpaca-python",
 
         desc3: "Pacman Game",
         repo3:
-          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=PacMan-PyGame&theme=graywhite",
+          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=PacMan-PyGame&theme=default_repocard",
         repolink3: "https://github.com/abspen1/PacMan-PyGame"
       },
       {
@@ -143,54 +189,78 @@ export default {
           "Go_(programming_language)/Go_(programming_language)-Logo.wine.svg",
         link: "Go/",
         caption: "Go",
-        desc: "My projects built with Go",
-        desc2: "My projects built with Go",
+        desc: "My website back-end built with Go",
         repo1:
-          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=twitter-bot&theme=graywhite",
+          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=go-backend&theme=default_repocard",
+        repolink1: "https://github.com/abspen1/go-backend",
+
+        desc2: "Algorithmic Trading",
         repo2:
-          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=alpaca-python&theme=graywhite"
+          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=go-trading-algo&theme=default_repocard",
+        repolink2: "https://github.com/abspen1/go-trading-algo"
       },
       {
         img: "Vue.js/Vue.js-Logo.wine.svg",
         link: "JavaScript/",
         caption: "Vue.js",
-        desc: "My projects built with Vue.js",
-        desc2: "My projects built with Vue.js",
+        desc: "This website!",
         repo1:
-          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=twitter-bot&theme=graywhite",
+          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=BootstrapVue-website&theme=default_repocard",
+        repolink1: "https://github.com/abspen1/BootstrapVue-website",
+
+        desc2: "Hangman Game",
         repo2:
-          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=alpaca-python&theme=graywhite",
-        livelink1: "novalue"
+          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=hangman-js&theme=default_repocard",
+        repolink2: "https://github.com/abspen1/hangman-js",
+        livelink2: "https://austinspencer.works/hangman-js/",
+
+        desc3: "Website V1",
+        repo3:
+          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=abspen1.github.io&theme=default_repocard",
+        repolink3: "https://github.com/abspen1/abspen1.github.io",
+        livelink3: "https://austinspencer.works/"
       },
       {
         img: "Redis/Redis-Logo.wine.svg",
         link: "redis/",
         caption: "Redis",
-        desc: "My projects implementing Redis",
-        desc2: "My projects implementing Redis",
+        desc: "Twitter Bot",
         repo1:
-          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=twitter-bot&theme=graywhite",
+          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=twitter-bot&theme=default_repocard",
+        repolink1: "https://github.com/twitter-bot",
+
+        desc2: "My website back-end built with Go",
         repo2:
-          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=alpaca-python&theme=graywhite",
-        livelink1: "novalue"
+          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=go-backend&theme=default_repocard",
+        repolink2: "https://github.com/go-backend",
+
+        desc3: "Most of my projects are built with Redis database"
       },
       {
         img: "Docker_(software)/Docker_(software)-Logo.wine.svg",
         link: "Docker/",
         caption: "Docker",
-        desc: "My projects that run as Docker containers",
-        desc2: "My projects that run as Docker containers",
+        desc: "Twitter Bot",
         repo1:
-          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=twitter-bot&theme=graywhite"
+          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=twitter-bot&theme=default_repocard",
+        repolink1: "https://github.com/twitter-bot",
+
+        desc2: "My website back-end built with Go",
+        repo2:
+          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=go-backend&theme=default_repocard",
+        repolink2: "https://github.com/go-backend",
+
+        desc3: "Demo of using Docker with several lanuages",
+        repo3:
+          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=docker-demo&theme=default_repocard",
+        repolink3: "https://github.com/docker-demo"
       },
       {
         img: "C%2B%2B/C%2B%2B-Logo.wine.svg",
         link: "Python/",
         caption: "C++",
-        desc: "My projects built with C++",
-        desc2: "My projects built with C++",
-        repo2:
-          "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=alpaca-python&theme=graywhite"
+        desc:
+          "I don't currently have any open-source projects built with C++. Follow my GitHub to see when I do!"
       }
     ],
     variant: "white",
