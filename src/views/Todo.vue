@@ -1,21 +1,16 @@
 <template>
-  <div id="todo"></div>
+  <div id="todo">
+    <h1>API Access</h1>
+    <todo-component></todo-component>
+  </div>
 </template>
 
 <script>
-import axios from "axios";
+import TodoComponent from "@/components/TodoComponent.vue";
 
 export default {
-  name: "app",
-  data() {},
-  async created() {
-    try {
-      const res = await axios.get("https://jsonplaceholder.typicode.com/posts");
-      console.log(res);
-      console.log(res.data);
-    } catch (e) {
-      console.error(e);
-    }
+  components: {
+    "todo-component": TodoComponent
   }
 };
 </script>
