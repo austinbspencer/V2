@@ -286,14 +286,8 @@ export default {
     loadLink(linkPath) {
       return "https://austinspencer.works/projects/" + linkPath;
     },
-
-    containsKey(obj, key) {
-      return Object.keys(obj).includes(key);
-    }
-  },
-  computed: {
-    hasName() {
-      return this.containsKey(this.obj, "livelink1");
+    loadRepo(repoPath) {
+      return "https://github.com/abspen1/" + repoPath;
     }
   }
 };
