@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-navbar toggleable="lg" type="light" variant="info" fixed="top">
-      <b-navbar-brand>Projects</b-navbar-brand>
+      <b-navbar-brand>Austin's Website</b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
