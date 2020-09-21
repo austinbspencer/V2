@@ -11,7 +11,7 @@
           class="mb-2"
         >
           <b-card-text> </b-card-text>
-          <div id="SideToggle">
+          <div>
             <b-button
               v-b-modal="obj.caption"
               @click="show = true"
@@ -32,7 +32,7 @@
             >
               <div class="px-3 py-2">
                 <b-form-group
-                  label="Window Size"
+                  label="Window Size (Browser Only)"
                   v-model="size"
                   :options="sizes"
                 >
