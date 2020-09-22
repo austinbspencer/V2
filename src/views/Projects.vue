@@ -1,5 +1,14 @@
 <template>
   <b-container>
+    <br />
+    <b-button
+      size="lg"
+      variant="outline-dark"
+      class="float-center"
+      href="https://austinspencer.works/next-project/"
+    >
+      Project Ideas
+    </b-button>
     <b-row align-v="center">
       <b-col md="4" v-for="(obj, key) in portfolioJSON" :key="key">
         <b-card
@@ -222,14 +231,6 @@
       </b-col>
     </b-row>
     <br />
-    <b-button
-      size="lg"
-      variant="outline-success"
-      class="float-center"
-      href="https://austinspencer.works/next-project/"
-    >
-      Project Ideas
-    </b-button>
   </b-container>
 </template>
 
