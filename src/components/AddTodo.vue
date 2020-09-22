@@ -34,7 +34,7 @@ export default {
       this.$emit("add-todo", newTodo);
 
       // clear title
-      this.Title = "";
+    //   this.Title = "";
     }
   }
 };
