@@ -3,8 +3,8 @@
     <form @submit="addTodo">
       <input
         type="text"
-        v-model="title"
-        name="title"
+        v-model="Title"
+        name="Title"
         placeholder="Add Todo..."
       />
       <input type="submit" value="Submit" class="btn" />
@@ -18,7 +18,7 @@ export default {
   name: "AddTodo",
   data() {
     return {
-      title: ""
+      Title: ""
     };
   },
   methods: {
@@ -27,14 +27,14 @@ export default {
       const newTodo = {
         // no longer need this since our API gives an automatic ID
         id: uuid.v4(),
-        title: this.title,
-        completed: false
+        Title: this.Title,
+        Completed: false
       };
       // Send to parent
       this.$emit("add-todo", newTodo);
 
       // clear title
-      this.title = "";
+      this.Title = "";
     }
   }
 };
