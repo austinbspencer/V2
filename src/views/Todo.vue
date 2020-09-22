@@ -27,7 +27,7 @@ export default {
   methods: {
     deleteTodo(Title, Completed, id) {
       axios
-        .post(`https://guldentech.com/austinapi/todos`, {
+        .post(`https://guldentech.com/austinapi/todos/rm`, {
           Title,
           Completed,
           id
