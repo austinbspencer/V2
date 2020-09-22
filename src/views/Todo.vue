@@ -25,9 +25,13 @@ export default {
     };
   },
   methods: {
-    deleteTodo(id) {
+    deleteTodo(Title, Completed, id) {
       axios
-        .delete(`https://jsonplaceholder.typicode.com/todos/${id}`)
+        .post(`https://guldentech.com/austinapi/todos`, {
+          Title,
+          Completed,
+          id
+        })
         .then(
           res =>
             (this.todos = this.todos.filter(todo => todo.id !== id, res.data))
