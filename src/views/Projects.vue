@@ -33,17 +33,18 @@
               centered
               :title="obj.caption"
               :size="size"
-              header-bg-variant="info"
-              :body-bg-variant="variant"
-              :body-text-variant="primary"
-              footer-bg-variant="dark"
+              header-bg-variant="primary"
+              header-text-variant="light"
+              body-bg-variant="dark"
+              body-text-variant="light"
+              footer-bg-variant="secondary"
               backdrop
               shadow
             >
-              <div class="px-3 py-2">
-                <h1>Interactive Styles!!</h1>
-                <!-- Window Size -->
-                <b-form-group
+              <!-- <div class="px-3 py-2">
+                <h1>Interactive Styles!!</h1> -->
+              <!-- Window Size -->
+              <!-- <b-form-group
                   label="Window Size (Browser Only)"
                   v-model="size"
                   :options="sizes"
@@ -53,9 +54,9 @@
                     v-model="size"
                     :options="sizes"
                   ></b-form-select>
-                </b-form-group>
-                <!-- Background Color -->
-                <b-form-group
+                </b-form-group> -->
+              <!-- Background Color -->
+              <!-- <b-form-group
                   label="Background Color"
                   v-model="variant"
                   :options="variants"
@@ -65,9 +66,9 @@
                     v-model="variant"
                     :options="variants"
                   ></b-form-select>
-                </b-form-group>
-                <!-- Text Color -->
-                <b-form-group
+                </b-form-group> -->
+              <!-- Text Color -->
+              <!-- <b-form-group
                   label="Text Color"
                   v-model="primary"
                   :options="variants"
@@ -77,8 +78,8 @@
                     v-model="primary"
                     :options="variants"
                   ></b-form-select>
-                </b-form-group>
-              </div>
+                </b-form-group> -->
+              <!-- </div> -->
               <!-- First project template -->
               <template v-if="'desc' in obj">
                 <div class="px-3 py-2">
@@ -99,7 +100,7 @@
                         id="dropdown-1"
                         text="Project Links"
                         size="md"
-                        variant="outline-secondary"
+                        variant="outline-primary"
                         class="m-md-2"
                       >
                         <b-dropdown-item :href="`${loadRepo(obj.repo1)}`"
@@ -112,7 +113,7 @@
                     </template>
                     <template v-else>
                       <b-button
-                        variant="outline-secondary"
+                        variant="outline-primary"
                         :href="`${loadRepo(obj.repo1)}`"
                         >GitHub</b-button
                       >
@@ -140,7 +141,7 @@
                         id="dropdown-1"
                         text="Project Links"
                         size="md"
-                        variant="outline-secondary"
+                        variant="outline-primary"
                         class="m-md-2"
                       >
                         <b-dropdown-item :href="`${loadRepo(obj.repo2)}`"
@@ -153,7 +154,7 @@
                     </template>
                     <template v-else>
                       <b-button
-                        variant="outline-secondary"
+                        variant="outline-primary"
                         :href="`${loadRepo(obj.repo2)}`"
                         >GitHub</b-button
                       >
@@ -181,7 +182,7 @@
                         id="dropdown-1"
                         text="Project Links"
                         size="md"
-                        variant="outline-secondary"
+                        variant="outline-primary"
                         class="m-md-2"
                       >
                         <b-dropdown-item :href="`${loadRepo(obj.repo3)}`"
@@ -194,7 +195,7 @@
                     </template>
                     <template v-else-if="`repo3` in obj">
                       <b-button
-                        variant="outline-secondary"
+                        variant="outline-primary"
                         :href="`${loadRepo(obj.repo3)}`"
                         >GitHub</b-button
                       >
@@ -208,7 +209,7 @@
                 <div class="w-100">
                   <b-button
                     size="sm"
-                    variant="outline-secondary"
+                    variant="light"
                     class="float-left"
                     href="https://github.com/abspen1"
                   >
@@ -245,11 +246,11 @@ export default {
       {
         img:
           "Python_(programming_language)/Python_(programming_language)-Logo.wine.svg",
-        link: "Python/",
+        // link: "Python/",
         caption: "Python",
         desc: "Twitter Bot",
         repo1: "twitter-bot",
-        livelink1: "https://austinspencer.works/twitter-bot/",
+        livelink1: "/twitter-bot/",
 
         desc2: "Algorithmic Trading",
         repo2: "alpaca-python",
@@ -260,7 +261,7 @@ export default {
       {
         img:
           "Go_(programming_language)/Go_(programming_language)-Logo.wine.svg",
-        link: "Go/",
+        // link: "Go/",
         caption: "Go",
         desc: "My website back-end built with Go",
         repo1: "go-backend",
@@ -270,26 +271,26 @@ export default {
       },
       {
         img: "Vue.js/Vue.js-Logo.wine.svg",
-        link: "JavaScript/",
+        // link: "JavaScript/",
         caption: "Vue.js",
         desc: "This website!",
         repo1: "V2",
 
         desc2: "Hangman Game",
         repo2: "hangman-js",
-        livelink2: "https://austinspencer.works/hangman-js/",
+        livelink2: "/hangman-js/",
 
         desc3: "Website V1",
         repo3: "abspen1.github.io",
-        livelink3: "https://austinspencer.works/"
+        livelink3: "/"
       },
       {
         img: "Redis/Redis-Logo.wine.svg",
-        link: "redis/",
+        // link: "redis/",
         caption: "Redis",
         desc: "Twitter Bot",
         repo1: "twitter-bot",
-        livelink1: "https://austinspencer.works/twitter-bot",
+        livelink1: "/twitter-bot/",
 
         desc2: "My website back-end built with Go",
         repo2: "go-backend",
@@ -299,11 +300,11 @@ export default {
       },
       {
         img: "Docker_(software)/Docker_(software)-Logo.wine.svg",
-        link: "Docker/",
+        // link: "Docker/",
         caption: "Docker",
         desc: "Twitter Bot",
         repo1: "twitter-bot",
-        livelink1: "https://austinspencer.works/twitter-bot",
+        livelink1: "/twitter-bot/",
 
         desc2: "My website back-end built with Go",
         repo2: "go-backend",
@@ -312,12 +313,19 @@ export default {
         repo3: "docker-demo"
       },
       {
-        img: "C%2B%2B/C%2B%2B-Logo.wine.svg",
-        link: "Python/",
-        caption: "C++",
-        desc:
-          "I don't currently have any open-source projects built with C++. Follow my GitHub to see when I do!"
+        img: "Twitter/Twitter-Logo.wine.svg",
+        caption: "Current Project",
+        desc: "Battle of the States Fantasy Football League",
+        repo1: "Fantasy-Twitter",
+        livelink1: "/Fantasy-Twitter/"
       }
+      // {
+      //   img: "C%2B%2B/C%2B%2B-Logo.wine.svg",
+      //   link: "Python/",
+      //   caption: "C++",
+      //   desc:
+      //     "I don't currently have any open-source projects built with C++. Follow my GitHub to see when I do!"
+      // }
     ],
     variant: "white",
     primary: "primary",
