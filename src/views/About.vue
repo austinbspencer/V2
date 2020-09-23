@@ -27,7 +27,6 @@
                 </b-button> -->
                 <b-modal
                   id="resume"
-                  scrollable
                   centered
                   title="Resume"
                   size="xl"
@@ -40,7 +39,7 @@
                   <b-row>
                     <b-col cols="12">
                       <iframe
-                        height="600"
+                        height="800"
                         width="100%"
                         src="https://austinspencer.works/resume/Austin_Resume.pdf"
                       ></iframe>
