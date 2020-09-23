@@ -26,13 +26,10 @@
                   variant="outline-danger"
                   >Resume</b-button
                 >
-                <b-button
-                  size="md"
-                  variant="danger"
-                >
-                <a id="pdf" href="<%= BASE_URL %>Austin_Resume.pdf"
-                  download><i class="fas fa-download"></i>
-                </a>
+                <b-button size="md" variant="danger">
+                  <a id="pdf" href="<%= BASE_URL %>Austin_Resume.pdf" download
+                    ><i class="fas fa-download"></i>
+                  </a>
                 </b-button>
                 <b-modal
                   id="resume"
@@ -90,7 +87,7 @@
         <b-col md="5">
           <b-card
             text-variant="dark"
-            title="A little about me..."
+            title="A little about me.."
             footer-tag="footer"
           >
             <b-card-text
@@ -165,8 +162,7 @@
 </template>
 
 <script>
-export default {
-}
+export default {};
 </script>
 <style lang="scss" scoped>
 #pdf a {
