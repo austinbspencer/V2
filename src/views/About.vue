@@ -57,10 +57,16 @@
                   </b-row>
                   <template v-slot:modal-footer="{ close }">
                     <!-- Button with custom close trigger value -->
-                    <div id="download-pdf" class="w-100">
-                      <a href="../assets/docs/Austin_Resume.pdf" download>
+                    <div class="w-100">
+                      <b-button
+                        size="sm"
+                        class="float-left"
+                        variant="danger"
+                        href="../assets/docs/Austin_Resume.pdf"
+                        download
+                      >
                         <i class="fas fa-download"></i>
-                      </a>
+                      </b-button>
                       <!-- Emulate built in modal footer ok and cancel button actions -->
                       <b-button
                         size="sm"
@@ -158,8 +164,4 @@
   </div>
 </template>
 
-<style lang="scss" scoped>
-#download-pdf a {
-  color: #dc3545;
-}
-</style>
+<style lang="scss" scoped></style>
