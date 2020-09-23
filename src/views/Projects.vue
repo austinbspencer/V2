@@ -1,5 +1,5 @@
 <template>
-  <b-container>
+  <b-container class="projects">
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
@@ -454,5 +454,8 @@ p.card-text {
 }
 .custom-select {
   width: 33%;
+}
+.projects {
+  padding-bottom: 4rem;
 }
 </style>

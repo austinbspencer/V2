@@ -166,4 +166,7 @@ export default {};
 #pdf a {
   color: #fff;
 }
+.about {
+  padding-bottom: 4rem;
+}
 </style>

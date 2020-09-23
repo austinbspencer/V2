@@ -7,17 +7,22 @@
       <!-- <router-link to="/about">About</router-link> -->
     </div>
     <router-view />
+    <footer>
+      <app-footer></app-footer>
+    </footer>
   </div>
 </template>
 
 <script>
 import TopHeader from "@/components/TopHeader.vue";
+import Footer from "@/components/Footer.vue";
 window.axios = require("axios");
 // import SideToggle from '@/components/SideToggle.vue'
 
 export default {
   components: {
-    "top-header": TopHeader
+    "top-header": TopHeader,
+    "app-footer": Footer
     // 'side-toggle': SideToggle
   }
 };
