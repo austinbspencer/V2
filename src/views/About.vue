@@ -89,7 +89,8 @@
               an undergraduate student at Arizona State University. My major is
               computer science and I plan to graduate in May of 2022. I enjoy
               staying active and being outdoors! Let's get in touch, click the
-              'Contact' button to be redirected to a page where you can email me directly!
+              'Contact' button to be redirected to a page where you can email me
+              directly!
             </b-card-text>
             <!-- Footer template -->
             <template v-slot:footer>
@@ -130,26 +131,26 @@
             style="min-width: 20rem;"
             footer-tag="footer"
           >
-          <template v-slot:footer>
-            <div class="w-100">
-              <b-button
-                size="md"
-                variant="outline-dark"
-                class="float-left"
-                href="https://github.com/abspen1/Fantasy-Twitter"
-              >
-                GitHub
-              </b-button>
-              <b-button
-                size="md"
-                variant="outline-dark"
-                class="float-right"
-                href="https://austinspencer.works/Fantasy-Twitter/"
-              >
-                Webpage
-              </b-button>
-            </div>
-          </template>
+            <template v-slot:footer>
+              <div class="w-100">
+                <b-button
+                  size="md"
+                  variant="outline-dark"
+                  class="float-left"
+                  href="https://github.com/abspen1/Fantasy-Twitter"
+                >
+                  GitHub
+                </b-button>
+                <b-button
+                  size="md"
+                  variant="outline-dark"
+                  class="float-right"
+                  href="https://austinspencer.works/Fantasy-Twitter/"
+                >
+                  Webpage
+                </b-button>
+              </div>
+            </template>
           </b-card>
         </b-col>
       </b-row>
