@@ -29,7 +29,7 @@
                 <b-button
                   size="md"
                   variant="danger"
-                  href="./assets/docs/Austin_Resume.pdf"
+                  href="../assets/docs/Austin_Resume.pdf"
                   download
                 >
                   <i class="fas fa-download"></i>
@@ -58,7 +58,7 @@
                   <template v-slot:modal-footer="{ close }">
                     <!-- Button with custom close trigger value -->
                     <div id="download-pdf" class="w-100">
-                      <a href="./assets/docs/Austin_Resume.pdf" download>
+                      <a href="../assets/docs/Austin_Resume.pdf" download>
                         <i class="fas fa-download"></i>
                       </a>
                       <!-- Emulate built in modal footer ok and cancel button actions -->
