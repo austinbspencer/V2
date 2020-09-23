@@ -106,7 +106,7 @@
                 </b-button>
                 <b-button
                   size="md"
-                  variant="outline-dark"
+                  variant="outline-success"
                   class="float-right"
                   href="https://austinspencer.works/about/contact/"
                 >
@@ -143,7 +143,7 @@
                 </b-button>
                 <b-button
                   size="md"
-                  variant="outline-dark"
+                  variant="outline-info"
                   class="float-right"
                   href="https://austinspencer.works/Fantasy-Twitter/"
                 >
