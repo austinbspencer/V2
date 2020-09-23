@@ -113,7 +113,8 @@
                           ><i class="fab fa-github"></i> GitHub</b-dropdown-item
                         >
                         <b-dropdown-item :href="obj.livelink1"
-                          ><i class="fas fa-laptop-code"></i> Live</b-dropdown-item
+                          ><i class="fas fa-laptop-code"></i>
+                          Live</b-dropdown-item
                         >
                       </b-dropdown>
                     </template>
@@ -154,7 +155,8 @@
                           ><i class="fab fa-github"></i> GitHub</b-dropdown-item
                         >
                         <b-dropdown-item :href="obj.livelink2"
-                          ><i class="fas fa-laptop-code"></i> Live</b-dropdown-item
+                          ><i class="fas fa-laptop-code"></i>
+                          Live</b-dropdown-item
                         >
                       </b-dropdown>
                     </template>
@@ -195,7 +197,8 @@
                           ><i class="fab fa-github"></i> GitHub</b-dropdown-item
                         >
                         <b-dropdown-item :href="obj.livelink3"
-                          ><i class="fas fa-laptop-code"></i> Live</b-dropdown-item
+                          ><i class="fas fa-laptop-code"></i>
+                          Live</b-dropdown-item
                         >
                       </b-dropdown>
                     </template>
@@ -218,7 +221,8 @@
                     variant="light"
                     class="float-left"
                     href="https://github.com/abspen1"
-                  ><i class="fab fa-github"></i> GitHub</b-button>
+                    ><i class="fab fa-github"></i> GitHub</b-button
+                  >
                   <!-- Emulate built in modal footer ok and cancel button actions -->
                   <b-button
                     size="sm"
