@@ -45,7 +45,6 @@
               body-text-variant="light"
               footer-bg-variant="secondary"
               backdrop
-              shadow
             >
               <!-- <div class="px-3 py-2">
                 <h1>Interactive Styles!!</h1> -->
