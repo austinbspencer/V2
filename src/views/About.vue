@@ -27,7 +27,7 @@
                   >Resume</b-button
                 >
                 <b-button size="md" variant="danger">
-                  <a id="pdf" href="/public/Austin_Resume.pdf" download
+                  <a id="pdf" href="public/Austin_Resume.pdf" download
                     ><i class="fas fa-download"></i>
                   </a>
                 </b-button>
@@ -59,7 +59,7 @@
                         size="sm"
                         class="float-left"
                         variant="danger"
-                        href="/public/Austin_Resume.pdf"
+                        href="public/Austin_Resume.pdf"
                         download
                       >
                         <i class="fas fa-download"></i>
