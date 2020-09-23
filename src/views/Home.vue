@@ -15,6 +15,14 @@
       sub-title="Austin Spencer"
     >
     </b-card>
+    <b-card-text>
+      <p>
+        &copy;<a href="https://gretchvalle.wixsite.com/glvphoto">
+          Gretchen Louise Photography</a
+        >
+        <i class="fas fa-camera-retro"></i>
+      </p>
+    </b-card-text>
   </div>
 </template>
 
