@@ -14,6 +14,8 @@
           <br />
           <br />
         </b-col>
+        <br />
+        <br />
         <b-col md="5">
           <b-card
             text-variant="dark"
@@ -50,7 +52,7 @@
               </div>
             </template>
             <br />
-          <br />
+            <br />
           </b-card>
         </b-col>
       </b-row>
