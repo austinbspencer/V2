@@ -24,10 +24,10 @@
 
       <b-navbar-toggle target="nav-collapse">
         <template v-slot:default="{ expanded }">
-          <b-icon v-if="expanded">
+          <span v-if="expanded">
             <i class="fas fa-chevron-circle-down"></i
-          ></b-icon>
-          <b-icon v-else> <i class="fas fa-chevron-circle-up"></i></b-icon>
+          ></span>
+          <span v-else> <i class="fas fa-chevron-circle-up"></i></span>
         </template>
       </b-navbar-toggle>
 
