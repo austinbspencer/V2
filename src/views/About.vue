@@ -18,7 +18,7 @@
           >
             <b-card-text>Check out my resume!</b-card-text>
             <template v-slot:footer>
-              <div>
+              <div id="pdf">
                 <b-button
                   size="md"
                   v-b-modal="'resume'"
@@ -29,10 +29,10 @@
                 <b-button
                   size="md"
                   variant="danger"
-                  href="../assets/docs/Austin_Resume.pdf"
-                  download
                 >
-                  <i class="fas fa-download"></i>
+                <a id="pdf" href="<%= BASE_URL %>Austin_Resume.pdf"
+                  download><i class="fas fa-download"></i>
+                </a>
                 </b-button>
                 <b-modal
                   id="resume"
@@ -62,7 +62,7 @@
                         size="sm"
                         class="float-left"
                         variant="danger"
-                        href="../assets/docs/Austin_Resume.pdf"
+                        href="<%= BASE_URL %>Austin_Resume.pdf"
                         download
                       >
                         <i class="fas fa-download"></i>
@@ -164,4 +164,12 @@
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<script>
+export default {
+}
+</script>
+<style lang="scss" scoped>
+#pdf a {
+  color: #fff;
+}
+</style>
