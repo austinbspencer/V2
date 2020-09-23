@@ -1,11 +1,5 @@
 <template>
   <div class="about">
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-      crossorigin="anonymous"
-    />
     <b-container>
       <b-row align-v="center">
         <b-col md="5">
@@ -26,11 +20,11 @@
                   variant="outline-danger"
                   >Resume</b-button
                 >
-                <b-button size="md" variant="danger">
+                <!-- <b-button size="md" variant="danger">
                   <a id="pdf" href="public/Austin_Resume.pdf" download
                     ><i class="fas fa-download"></i>
                   </a>
-                </b-button>
+                </b-button> -->
                 <b-modal
                   id="resume"
                   scrollable
@@ -58,11 +52,10 @@
                       <b-button
                         size="sm"
                         class="float-left"
-                        variant="danger"
-                        href="public/Austin_Resume.pdf"
-                        download
+                        variant="light"
+                        href="https://austinspencer.works/resume/Austin_Resume.pdf"
                       >
-                        <i class="fas fa-download"></i>
+                        Full Page
                       </b-button>
                       <!-- Emulate built in modal footer ok and cancel button actions -->
                       <b-button
@@ -94,8 +87,8 @@
               >Hi, I'm Austin Spencer. Thank you for visiting my website! I am
               an undergraduate student at Arizona State University. My major is
               computer science and I plan to graduate in May of 2022. I enjoy
-              staying active and being outdoors! If you have a project idea I
-              would love to hear it!
+              staying active and being outdoors! Let's get in touch, click the
+              'Contact' button to be redirected to a page where you can email me directly!
             </b-card-text>
             <!-- Footer template -->
             <template v-slot:footer>
@@ -136,9 +129,10 @@
             style="min-width: 20rem;"
             footer-tag="footer"
           >
+          <template v-slot:footer>
             <div class="w-100">
               <b-button
-                size="sm"
+                size="md"
                 variant="outline-dark"
                 class="float-left"
                 href="https://github.com/abspen1/Fantasy-Twitter"
@@ -146,7 +140,7 @@
                 GitHub
               </b-button>
               <b-button
-                size="sm"
+                size="md"
                 variant="outline-dark"
                 class="float-right"
                 href="https://austinspencer.works/Fantasy-Twitter/"
@@ -154,6 +148,7 @@
                 Webpage
               </b-button>
             </div>
+          </template>
           </b-card>
         </b-col>
       </b-row>
