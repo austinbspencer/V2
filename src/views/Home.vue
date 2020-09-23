@@ -15,16 +15,6 @@
       sub-title="Austin Spencer"
     >
     </b-card>
-    <template>
-      <link
-        rel="stylesheet"
-        href="node_modules/@fortawesome/fontawesome-free/css/all.css"
-      />
-      <h1>Using Font Awesome "Brand" icons in Vue.js</h1>
-      <p>Have a cup of coffee: <i class="fas fa-coffee"></i></p>
-      <p>Have a module of JavaScript: <i class="fab fa-js"></i></p>
-      <p>Have a module of Vue.js: <i class="fab fa-vuejs"></i></p>
-    </template>
   </div>
 </template>
 
