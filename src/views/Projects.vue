@@ -1,5 +1,11 @@
 <template>
   <b-container>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      crossorigin="anonymous"
+    />
     <br />
     <b-button
       size="lg"
@@ -104,10 +110,10 @@
                         class="m-md-2"
                       >
                         <b-dropdown-item :href="`${loadRepo(obj.repo1)}`"
-                          >GitHub</b-dropdown-item
+                          ><i class="fab fa-github"></i> GitHub</b-dropdown-item
                         >
                         <b-dropdown-item :href="obj.livelink1"
-                          >Live</b-dropdown-item
+                          ><i class="fas fa-laptop-code"></i> Live</b-dropdown-item
                         >
                       </b-dropdown>
                     </template>
@@ -115,7 +121,7 @@
                       <b-button
                         variant="outline-primary"
                         :href="`${loadRepo(obj.repo1)}`"
-                        >GitHub</b-button
+                        ><i class="fab fa-github"></i> GitHub</b-button
                       >
                     </template>
                   </div>
@@ -145,10 +151,10 @@
                         class="m-md-2"
                       >
                         <b-dropdown-item :href="`${loadRepo(obj.repo2)}`"
-                          >GitHub</b-dropdown-item
+                          ><i class="fab fa-github"></i> GitHub</b-dropdown-item
                         >
                         <b-dropdown-item :href="obj.livelink2"
-                          >Live</b-dropdown-item
+                          ><i class="fas fa-laptop-code"></i> Live</b-dropdown-item
                         >
                       </b-dropdown>
                     </template>
@@ -156,7 +162,7 @@
                       <b-button
                         variant="outline-primary"
                         :href="`${loadRepo(obj.repo2)}`"
-                        >GitHub</b-button
+                        ><i class="fab fa-github"></i> GitHub</b-button
                       >
                     </template>
                   </div>
@@ -186,10 +192,10 @@
                         class="m-md-2"
                       >
                         <b-dropdown-item :href="`${loadRepo(obj.repo3)}`"
-                          >GitHub</b-dropdown-item
+                          ><i class="fab fa-github"></i> GitHub</b-dropdown-item
                         >
                         <b-dropdown-item :href="obj.livelink3"
-                          >Live</b-dropdown-item
+                          ><i class="fas fa-laptop-code"></i> Live</b-dropdown-item
                         >
                       </b-dropdown>
                     </template>
@@ -197,7 +203,7 @@
                       <b-button
                         variant="outline-primary"
                         :href="`${loadRepo(obj.repo3)}`"
-                        >GitHub</b-button
+                        ><i class="fab fa-github"></i> GitHub</b-button
                       >
                     </template>
                   </div>
@@ -212,9 +218,7 @@
                     variant="light"
                     class="float-left"
                     href="https://github.com/abspen1"
-                  >
-                    GitHub
-                  </b-button>
+                  ><i class="fab fa-github"></i> GitHub</b-button>
                   <!-- Emulate built in modal footer ok and cancel button actions -->
                   <b-button
                     size="sm"
