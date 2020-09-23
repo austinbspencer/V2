@@ -9,11 +9,16 @@
     "gh-pages-deploy": "node scripts/gh-pages-deploy.js"
   },
   "dependencies": {
+    "-": "0.0.1",
+    "@fortawesome/free-brands-svg-icons": "^5.14.0",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/vue-fontawesome": "^2.0.0",
     "axios": "^0.20.0",
     "bootstrap-vue": "^2.1.0",
     "core-js": "^3.6.5",
     "execa": "latest",
     "mdbvue": "^6.7.1",
+    "save": "^2.4.0",
     "vue": "^2.6.11",
     "vue-axios": "^2.1.5",
     "vue-router": "^3.2.0",
