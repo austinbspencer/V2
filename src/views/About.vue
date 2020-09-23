@@ -1,15 +1,80 @@
 <template>
   <div class="about">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      crossorigin="anonymous"
+    />
     <b-container>
       <b-row align-v="center">
         <b-col md="5">
           <b-card
-            overlay
+            img-top
             img-src="https://scontent.fphx1-1.fna.fbcdn.net/v/t1.0-9/83322175_2958884524156199_6029303686017056768_n.jpg?_nc_cat=111&_nc_sid=8bfeb9&_nc_ohc=fnfapXEthZMAX_avawZ&_nc_oc=AQlPmAdGcaj7aAR2YRr3Omt2C-MlqWsYSVQM6zG-rM1fDbjo_hKqeAjsHMFJ4CGU-_x3ASTBzSSLN9VL6PNGpfGZ&_nc_ht=scontent.fphx1-1.fna&oh=6281bba06014fd36955b4b3d1e86536b&oe=5F8CE9F3"
             img-alt="Card Image"
-            text-variant="dark"
             style="min-width: 20rem;"
+            footer-tag="footer"
           >
+            <b-card-text>Check out my resume!</b-card-text>
+            <template v-slot:footer>
+              <div>
+                <b-button
+                  size="md"
+                  v-b-modal="'resume'"
+                  @click="show = true"
+                  variant="outline-danger"
+                  >Resume</b-button
+                >
+                <b-button
+                  size="md"
+                  variant="danger"
+                  href="./assets/docs/Austin_Resume.pdf"
+                  download
+                >
+                  <i class="fas fa-download"></i>
+                </b-button>
+                <b-modal
+                  id="resume"
+                  scrollable
+                  centered
+                  title="Resume"
+                  size="xl"
+                  header-bg-variant="dark"
+                  header-text-variant="light"
+                  body-bg-variant="light"
+                  footer-bg-variant="dark"
+                  backdrop
+                >
+                  <b-row>
+                    <b-col cols="12">
+                      <iframe
+                        height="600"
+                        width="100%"
+                        src="https://austinspencer.works/resume/Austin_Resume.pdf"
+                      ></iframe>
+                    </b-col>
+                  </b-row>
+                  <template v-slot:modal-footer="{ close }">
+                    <!-- Button with custom close trigger value -->
+                    <div id="download-pdf" class="w-100">
+                      <a href="./assets/docs/Austin_Resume.pdf" download>
+                        <i class="fas fa-download"></i>
+                      </a>
+                      <!-- Emulate built in modal footer ok and cancel button actions -->
+                      <b-button
+                        size="sm"
+                        variant="danger"
+                        class="float-right"
+                        @click="close()"
+                      >
+                        Close
+                      </b-button>
+                    </div>
+                  </template>
+                </b-modal>
+              </div>
+            </template>
           </b-card>
           <br />
           <br />
@@ -92,3 +157,9 @@
     </b-container>
   </div>
 </template>
+
+<style lang="scss" scoped>
+#download-pdf a {
+  color: #dc3545;
+}
+</style>
