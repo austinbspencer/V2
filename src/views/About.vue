@@ -54,6 +54,7 @@
                         class="float-left"
                         variant="light"
                         href="https://austinspencer.works/resume/Austin_Resume.pdf"
+                        target="_blank"
                       >
                         Full Page
                       </b-button>
