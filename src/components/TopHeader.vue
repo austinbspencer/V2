@@ -9,11 +9,11 @@
     <b-navbar toggleable="lg" type="dark" variant="dark" fixed="top">
       <b-navbar-brand>
         <b-row>
-          <b-col cols="4" id="brand">
+          <b-col cols="4" id="brand" v-b-tooltip.hover title="GitHub">
             <a href="https://github.com/abspen1"><i class="fab fa-github"></i>&emsp;</a>
             <span>&emsp;</span>
           </b-col>
-          <b-col cols="4" id="brand">
+          <b-col cols="4" id="brand" v-b-tooltip.hover title="LinkedIn">
             <a href="https://www.linkedin.com/in/austin-spencer-b56a25177/"><i class="fab fa-linkedin-in"></i>&emsp;</a>
           </b-col>
         </b-row>
