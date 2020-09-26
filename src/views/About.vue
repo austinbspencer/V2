@@ -14,7 +14,7 @@
           >
             <!-- <b-card-text>Check out my resume!</b-card-text> -->
             <template v-slot:footer>
-              <div id="pdf">
+              <div id="pdf" class="float-center">
                 <b-button
                   size="md"
                   v-b-modal="'resume'"
