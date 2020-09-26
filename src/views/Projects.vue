@@ -33,7 +33,6 @@
               variant="secondary"
               >Show Projects</b-button
             >
-
             <b-modal
               :id="obj.caption"
               centered
@@ -41,7 +40,7 @@
               :size="size"
               header-bg-variant="primary"
               header-text-variant="light"
-              body-bg-variant="dark"
+              body-bg-variant="secondary"
               body-text-variant="light"
               footer-bg-variant="secondary"
               backdrop
@@ -105,7 +104,7 @@
                         id="dropdown-1"
                         text="Project Links"
                         size="md"
-                        variant="outline-primary"
+                        variant="outline-dark"
                         class="m-md-2"
                       >
                         <b-dropdown-item :href="`${loadRepo(obj.repo1)}`"
@@ -119,7 +118,7 @@
                     </template>
                     <template v-else>
                       <b-button
-                        variant="outline-primary"
+                        variant="outline-dark"
                         :href="`${loadRepo(obj.repo1)}`"
                         ><i class="fab fa-github"></i> GitHub</b-button
                       >
@@ -147,7 +146,7 @@
                         id="dropdown-1"
                         text="Project Links"
                         size="md"
-                        variant="outline-primary"
+                        variant="outline-dark"
                         class="m-md-2"
                       >
                         <b-dropdown-item :href="`${loadRepo(obj.repo2)}`"
@@ -161,7 +160,7 @@
                     </template>
                     <template v-else>
                       <b-button
-                        variant="outline-primary"
+                        variant="outline-dark"
                         :href="`${loadRepo(obj.repo2)}`"
                         ><i class="fab fa-github"></i> GitHub</b-button
                       >
@@ -189,7 +188,7 @@
                         id="dropdown-1"
                         text="Project Links"
                         size="md"
-                        variant="outline-primary"
+                        variant="outline-dark"
                         class="m-md-2"
                       >
                         <b-dropdown-item :href="`${loadRepo(obj.repo3)}`"
@@ -203,7 +202,7 @@
                     </template>
                     <template v-else-if="`repo3` in obj">
                       <b-button
-                        variant="outline-primary"
+                        variant="outline-dark"
                         :href="`${loadRepo(obj.repo3)}`"
                         ><i class="fab fa-github"></i> GitHub</b-button
                       >
