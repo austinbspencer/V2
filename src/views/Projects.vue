@@ -42,7 +42,7 @@
               header-text-variant="light"
               body-bg-variant="secondary"
               body-text-variant="light"
-              footer-bg-variant="secondary"
+              footer-bg-variant="light"
               backdrop
             >
               <!-- <div class="px-3 py-2">
