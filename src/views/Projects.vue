@@ -276,7 +276,10 @@ export default {
         repo1: "go-backend",
 
         desc2: "Algorithmic Trading",
-        repo2: "go-trading-algo"
+        repo2: "go-trading-algo",
+
+        desc3: "Automated birthday emailer",
+        repo3: "bday-email"
       },
       {
         img: "Vue.js/Vue.js-Logo.wine.svg",
