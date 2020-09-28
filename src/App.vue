@@ -47,15 +47,22 @@ export default {
     }
   }
 }
-#danger {
+#danger-outline {
   color: #dc3545;
   border: 1px solid #dc3545;
   background-color: transparent;
 }
-#danger:hover {
+#danger-outline:hover {
   color: white;
   background-color: #dc3545;
   border-color: transparent;
+}
+#danger {
+  color: white;
+  background-color: #dc3545;
+}
+#danger:hover {
+  background-color: #ac2633;
 }
 #dark-outline {
   color: #343a40;

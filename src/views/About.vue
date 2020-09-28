@@ -16,7 +16,7 @@
             <template v-slot:footer>
               <div id="pdf" class="float-center">
                 <b-button
-                  id="danger"
+                  id="danger-outline"
                   size="md"
                   v-b-modal="'resume'"
                   @click="show = true"
@@ -62,6 +62,7 @@
                       </b-button>
                       <!-- Emulate built in modal footer ok and cancel button actions -->
                       <b-button
+                        id="danger"
                         size="sm"
                         variant="danger"
                         class="float-right"

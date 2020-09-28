@@ -41,9 +41,9 @@
               :size="size"
               header-bg-variant="primary"
               header-text-variant="light"
-              body-bg-variant="secondary"
-              body-text-variant="light"
-              footer-bg-variant="light"
+              body-bg-variant="light"
+              body-text-variant="dark"
+              footer-bg-variant="dark"
               backdrop
             >
               <!-- <div class="px-3 py-2">
@@ -216,14 +216,16 @@
                 <!-- Button with custom close trigger value -->
                 <div class="w-100">
                   <b-button
+                    id="success-outline"
                     size="sm"
-                    variant="light"
+                    variant="dark"
                     class="float-left"
                     href="https://github.com/abspen1"
                     ><i class="fab fa-github"></i> GitHub</b-button
                   >
                   <!-- Emulate built in modal footer ok and cancel button actions -->
                   <b-button
+                    id="danger"
                     size="sm"
                     variant="danger"
                     class="float-right"
