@@ -167,44 +167,4 @@
 <script>
 export default {};
 </script>
-<style lang="scss" scoped>
-#danger {
-    color: #dc3545;
-    border: 1px solid #dc3545;
-    background-color: transparent;
-}
-#danger:hover {
-  color: white;
-  background-color: #dc3545;
-  border-color: transparent;
-}
-#dark {
-  color: #343a40;
-  border: 1px solid #343a40;
-  background-color: transparent;
-}
-#dark:hover {
-  color: white;
-  background-color: #343a40;
-  border-color: transparent;
-}
-#success {
-  color: #28a745;
-  background-color: transparent;
-  border: 1px solid #28a745;
-}
-#success:hover {
-  color: white;
-  background-color: #28a745;
-  border-color: transparent;
-}
-#info {
-  color: #17a2b8;
-  border: 1px solid #17a2b8;
-}
-#info:hover {
-  color: white;
-  border: solid transparent;
-  background-color: #17a2b8;
-}
-</style>
+<style lang="scss" scoped></style>
