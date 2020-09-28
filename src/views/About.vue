@@ -99,6 +99,7 @@
               <!-- Button with custom close trigger value -->
               <div class="w-100">
                 <b-button
+                  id="dark"
                   size="md"
                   variant="outline-dark"
                   class="float-left"
@@ -136,6 +137,7 @@
             <template v-slot:footer>
               <div class="w-100">
                 <b-button
+                  id="dark"
                   size="md"
                   variant="outline-dark"
                   class="float-left"
@@ -171,8 +173,17 @@ export default {};
 }
 #danger:hover {
   color: white;
-  border-color: white;
   background-color: #dc3545;
+  border-color: transparent;
+}
+#dark {
+    color: #343a40;
+    border-color: #343a40;
+    background-color: transparent;
+}
+#dark:hover {
+  color: white;
+  background-color: #343a40;
   border-color: transparent;
 }
 </style>
