@@ -79,6 +79,7 @@ export default {
 }
 #info {
   color: #17a2b8;
+  background-color: transparent;
   border: 1px solid #17a2b8;
 }
 #info:hover {
