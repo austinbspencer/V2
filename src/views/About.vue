@@ -108,6 +108,7 @@
                   GitHub
                 </b-button>
                 <b-button
+                  id="success"
                   size="md"
                   variant="outline-success"
                   class="float-right"
@@ -146,6 +147,7 @@
                   GitHub
                 </b-button>
                 <b-button
+                  id="info"
                   size="md"
                   variant="outline-info"
                   class="float-right"
@@ -195,5 +197,14 @@ export default {};
   color: white;
   background-color: #28a745;
   border-color: transparent;
+}
+#info {
+  color: #17a2b8;
+  border: 1px solid #17a2b8;
+}
+#info:hover {
+  color: white;
+  border: solid transparent;
+  background-color: #17a2b8;
 }
 </style>
