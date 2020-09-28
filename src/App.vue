@@ -84,7 +84,7 @@ export default {
 }
 #info-outline:hover {
   color: white;
-  border: solid transparent;
+  border-color: transparent;
   background-color: #17a2b8;
 }
 </style>
