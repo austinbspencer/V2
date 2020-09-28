@@ -168,7 +168,8 @@ export default {};
 <style lang="scss" scoped>
 #danger {
     color: #dc3545;
-    border-color: #dc3545;
+    border-width: 1px;
+    border-color: solid #dc3545;
     background-color: transparent;
 }
 #danger:hover {
@@ -178,7 +179,8 @@ export default {};
 }
 #dark {
     color: #343a40;
-    border-color: #343a40;
+    border-width: 1px;
+    border-color: solid #343a40;
     background-color: transparent;
 }
 #dark:hover {
