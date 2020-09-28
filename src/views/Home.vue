@@ -24,7 +24,7 @@
       <b-card-footer>
         <div class="float-right">
           <p>
-            &copy;<a href="https://gretchvalle.wixsite.com/glvphoto">
+            <a href="https://gretchvalle.wixsite.com/glvphoto">
               Gretchen Louise Photography
             </a>
             <i class="fas fa-camera-retro"></i>
