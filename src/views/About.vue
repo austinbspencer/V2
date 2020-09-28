@@ -99,7 +99,7 @@
               <!-- Button with custom close trigger value -->
               <div class="w-100">
                 <b-button
-                  id="dark"
+                  id="dark-outline"
                   size="md"
                   variant="outline-dark"
                   class="float-left"
@@ -138,7 +138,7 @@
             <template v-slot:footer>
               <div class="w-100">
                 <b-button
-                  id="dark"
+                  id="dark-outline"
                   size="md"
                   variant="outline-dark"
                   class="float-left"

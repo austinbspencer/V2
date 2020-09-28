@@ -57,12 +57,12 @@ export default {
   background-color: #dc3545;
   border-color: transparent;
 }
-#dark {
+#dark-outline {
   color: #343a40;
   border: 1px solid #343a40;
   background-color: transparent;
 }
-#dark:hover {
+#dark-outline:hover {
   color: white;
   background-color: #343a40;
   border-color: transparent;
