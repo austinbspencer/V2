@@ -94,4 +94,11 @@ export default {
   border-color: transparent;
   background-color: #17a2b8;
 }
+#light {
+  color: #343a40;
+  background-color: white;
+}
+#light:hover {
+  background-color: #e2e2e2;
+}
 </style>

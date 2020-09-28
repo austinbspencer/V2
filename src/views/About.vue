@@ -52,6 +52,7 @@
                     <!-- Button with custom close trigger value -->
                     <div class="w-100">
                       <b-button
+                        id="light"
                         size="sm"
                         class="float-left"
                         variant="light"
