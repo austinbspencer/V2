@@ -178,14 +178,24 @@ export default {};
   border-color: transparent;
 }
 #dark {
-    color: #343a40;
-    border-width: 1px;
-    border-color: solid #343a40;
-    background-color: transparent;
+  color: #343a40;
+  border-width: 1px;
+  border-color: solid #343a40;
+  background-color: transparent;
 }
 #dark:hover {
   color: white;
   background-color: #343a40;
+  border-color: transparent;
+}
+#success {
+  color: #28a745;
+  background-color: transparent;
+  border: 1px solid #28a745;
+}
+#success:hover {
+  color: white;
+  background-color: #28a745;
   border-color: transparent;
 }
 </style>
