@@ -8,6 +8,7 @@
     />
     <br />
     <b-button
+      id="dark-outline"
       size="lg"
       variant="outline-dark"
       class="float-center"
