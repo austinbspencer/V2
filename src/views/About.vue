@@ -16,6 +16,7 @@
             <template v-slot:footer>
               <div id="pdf" class="float-center">
                 <b-button
+                  id="danger"
                   size="md"
                   v-b-modal="'resume'"
                   @click="show = true"
@@ -163,10 +164,12 @@
 export default {};
 </script>
 <style lang="scss" scoped>
-#pdf a {
-  color: #fff;
+#danger {
+    color: #dc3545;
+    border-color: #dc3545;
 }
-.about {
-  padding-bottom: 4rem;
+#danger:hover {
+  color: white;
+  border-color: white;
 }
 </style>
