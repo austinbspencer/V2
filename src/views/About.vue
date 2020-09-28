@@ -108,7 +108,7 @@
                   GitHub
                 </b-button>
                 <b-button
-                  id="success"
+                  id="success-outline"
                   size="md"
                   variant="outline-success"
                   class="float-right"
@@ -147,7 +147,7 @@
                   GitHub
                 </b-button>
                 <b-button
-                  id="info"
+                  id="info-outline"
                   size="md"
                   variant="outline-info"
                   class="float-right"

@@ -67,22 +67,22 @@ export default {
   background-color: #343a40;
   border-color: transparent;
 }
-#success {
+#success-outline {
   color: #28a745;
   background-color: transparent;
   border: 1px solid #28a745;
 }
-#success:hover {
+#success-outline:hover {
   color: white;
   background-color: #28a745;
   border-color: transparent;
 }
-#info {
+#info-outline {
   color: #17a2b8;
   background-color: transparent;
   border: 1px solid #17a2b8;
 }
-#info:hover {
+#info-outline:hover {
   color: white;
   border: solid transparent;
   background-color: #17a2b8;
