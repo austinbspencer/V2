@@ -167,9 +167,12 @@ export default {};
 #danger {
     color: #dc3545;
     border-color: #dc3545;
+    background-color: transparent;
 }
 #danger:hover {
   color: white;
   border-color: white;
+  background-color: #dc3545;
+  border-color: transparent;
 }
 </style>
