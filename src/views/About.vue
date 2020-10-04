@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <b-container>
-      <b-row align-v="center">
+      <b-row id="block" align-v="center">
         <b-col md="5">
           <b-card
             text-variant="white"
@@ -125,7 +125,7 @@
           </b-card>
         </b-col>
       </b-row>
-      <b-row align-v="center">
+      <b-row id="block" align-v="center">
         <b-col cols="2"></b-col>
         <b-col cols="3" md="3">
           <b-card
@@ -169,4 +169,8 @@
 <script>
 export default {};
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+#block {
+  padding-bottom: 30px;
+}
+</style>
