@@ -328,8 +328,8 @@ export default {
         img: "Twitter/Twitter-Logo.wine.svg",
         caption: "Current Project",
         desc: "Battle of the States Fantasy Football League",
-        repo1: "Fantasy-Twitter",
-        livelink1: "/Fantasy-Twitter/"
+        repo1: "BOTS-FFL",
+        livelink1: "/BOTS-FFL/"
       }
       // {
       //   img: "C%2B%2B/C%2B%2B-Logo.wine.svg",
