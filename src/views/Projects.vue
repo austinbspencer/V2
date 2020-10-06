@@ -211,6 +211,48 @@
                   </div>
                 </div>
               </template>
+              <!-- 4th project area -->
+              <template v-if="'desc4' in obj">
+                <div class="px-3 py-2">
+                  <p>
+                    {{ obj.desc4 }}
+                  </p>
+                  <b-img
+                    v-if="'repo4' in obj"
+                    :src="`${loadRepoStats(obj.repo4)}`"
+                    fluid
+                    thumbnail
+                  ></b-img>
+                  <br />
+                  <br />
+                  <div class="w-75">
+                    <template v-if="'livelink4' in obj">
+                      <b-dropdown
+                        id="dropdown-1"
+                        text="Project Links"
+                        size="md"
+                        variant="outline-dark"
+                        class="m-md-2"
+                      >
+                        <b-dropdown-item :href="`${loadRepo(obj.repo4)}`"
+                          ><i class="fab fa-github"></i> GitHub</b-dropdown-item
+                        >
+                        <b-dropdown-item :href="obj.livelink4"
+                          ><i class="fas fa-laptop-code"></i>
+                          Live</b-dropdown-item
+                        >
+                      </b-dropdown>
+                    </template>
+                    <template v-else-if="`repo4` in obj">
+                      <b-button
+                        variant="outline-dark"
+                        :href="`${loadRepo(obj.repo4)}`"
+                        ><i class="fab fa-github"></i> GitHub</b-button
+                      >
+                    </template>
+                  </div>
+                </div>
+              </template>
               <!-- Footer template -->
               <template v-slot:modal-footer="{ close }">
                 <!-- Button with custom close trigger value -->
@@ -265,12 +307,15 @@ export default {
         repo2: "alpaca-python",
 
         desc3: "Pacman Game",
-        repo3: "PacMan-PyGame"
+        repo3: "PacMan-PyGame",
+
+        desc4: "Fantasy football league webpage and automated twitter account",
+        repo4: "BOTS-FFL",
+        livelink4: "/BOTS-FFL/"
       },
       {
         img:
           "Go_(programming_language)/Go_(programming_language)-Logo.wine.svg",
-        // link: "Go/",
         caption: "Go",
         desc: "My website back-end built with Go",
         repo1: "go-backend",
@@ -279,11 +324,13 @@ export default {
         repo2: "go-trading-algo",
 
         desc3: "Automated birthday emailer",
-        repo3: "bday-email"
+        repo3: "bday-email",
+
+        desc4: "Compressing messages with custom encoder",
+        repo4: "go-encode"
       },
       {
         img: "Vue.js/Vue.js-Logo.wine.svg",
-        // link: "JavaScript/",
         caption: "Vue.js",
         desc: "This website!",
         repo1: "V2",
@@ -298,7 +345,6 @@ export default {
       },
       {
         img: "Redis/Redis-Logo.wine.svg",
-        // link: "redis/",
         caption: "Redis",
         desc: "Twitter Bot",
         repo1: "twitter-bot",
@@ -312,7 +358,6 @@ export default {
       },
       {
         img: "Docker_(software)/Docker_(software)-Logo.wine.svg",
-        // link: "Docker/",
         caption: "Docker",
         desc: "Twitter Bot",
         repo1: "twitter-bot",
@@ -325,11 +370,17 @@ export default {
         repo3: "docker-demo"
       },
       {
-        img: "Twitter/Twitter-Logo.wine.svg",
+        img: "Google_Cloud_Platform/Google_Cloud_Platform-Logo.wine.svg",
         caption: "Current Project",
-        desc: "Battle of the States Fantasy Football League",
-        repo1: "BOTS-FFL",
-        livelink1: "/BOTS-FFL/"
+
+        desc:
+          "Twitter Bot, implements Redis & Docker on Google Cloud VM Instance",
+        repo1: "twitter-bot",
+        livelink1: "/twitter-bot/",
+
+        desc2: "Battle of the States Fantasy Football League",
+        repo2: "BOTS-FFL",
+        livelink2: "/BOTS-FFL/"
       }
       // {
       //   img: "C%2B%2B/C%2B%2B-Logo.wine.svg",
