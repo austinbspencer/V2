@@ -333,9 +333,17 @@ export default {
         img: "Vue.js/Vue.js-Logo.wine.svg",
         caption: "Vue.js",
         desc: "This website!",
-        repo1: "V2",
+        repo1: "V2"
+      },
+      {
+        img: "Node.js/Node.js-Logo.wine.svg",
+        caption: "JavaScript Projects",
 
-        desc2: "Hangman Game",
+        desc: "Rock Paper Scissors Game with back-end save data function, Repo is private but the live link is still working!",
+        repo1: "rps-js",
+        livelink1: "/rps-js/",
+
+        desc2: "Hangman Game, my first JavaScript project",
         repo2: "hangman-js",
         livelink2: "/hangman-js/",
 
