@@ -389,14 +389,28 @@ export default {
         desc2: "Battle of the States Fantasy Football League",
         repo2: "BOTS-FFL",
         livelink2: "/BOTS-FFL/"
+      },
+      {
+        img:
+          "Java_(programming_language)/Java_(programming_language)-Logo.wine.svg",
+        caption: "Java",
+        desc: "Interactive coffee shop",
+        repo1: "coffee-shop",
+        livelink1: "/projects/java/demos/coffee/",
+
+        desc2: "Teacher attendance tracker GUI",
+        repo2: "360-Final-Project",
+        livelink2: "/projects/java/demos/gui/"
+      },
+      {
+        img: "C%2B%2B/C%2B%2B-Logo.wine.svg",
+        caption: "C++",
+        desc: "Encoder/Decoder for txt file compression",
+        repo1: "cse-310-encode-decode",
+
+        desc2: "Interactive App Store",
+        repo2: "cse-310-app-store"
       }
-      // {
-      //   img: "C%2B%2B/C%2B%2B-Logo.wine.svg",
-      //   link: "Python/",
-      //   caption: "C++",
-      //   desc:
-      //     "I don't currently have any open-source projects built with C++. Follow my GitHub to see when I do!"
-      // }
     ],
     variant: "white",
     primary: "primary",
