@@ -93,7 +93,7 @@
                   </p>
                   <b-img
                     v-if="'repo1' in obj"
-                    :src="`${loadRepoStats(obj.repo1)}`"
+                    :src="`${loadRepoStats(obj.repo1, obj.user1)}`"
                     fluid
                     thumbnail
                   ></b-img>
@@ -108,7 +108,8 @@
                         variant="outline-dark"
                         class="m-md-2"
                       >
-                        <b-dropdown-item :href="`${loadRepo(obj.repo1)}`"
+                        <b-dropdown-item
+                          :href="`${loadRepo(obj.repo1, obj.user1)}`"
                           ><i class="fab fa-github"></i> GitHub</b-dropdown-item
                         >
                         <b-dropdown-item :href="obj.livelink1"
@@ -120,7 +121,7 @@
                     <template v-else>
                       <b-button
                         variant="outline-dark"
-                        :href="`${loadRepo(obj.repo1)}`"
+                        :href="`${loadRepo(obj.repo1, obj.user1)}`"
                         ><i class="fab fa-github"></i> GitHub</b-button
                       >
                     </template>
@@ -135,7 +136,7 @@
                   </p>
                   <b-img
                     v-if="'repo2' in obj"
-                    :src="`${loadRepoStats(obj.repo2)}`"
+                    :src="`${loadRepoStats(obj.repo2, obj.user2)}`"
                     fluid
                     thumbnail
                   ></b-img>
@@ -150,7 +151,8 @@
                         variant="outline-dark"
                         class="m-md-2"
                       >
-                        <b-dropdown-item :href="`${loadRepo(obj.repo2)}`"
+                        <b-dropdown-item
+                          :href="`${loadRepo(obj.repo2, obj.user2)}`"
                           ><i class="fab fa-github"></i> GitHub</b-dropdown-item
                         >
                         <b-dropdown-item :href="obj.livelink2"
@@ -162,7 +164,7 @@
                     <template v-else>
                       <b-button
                         variant="outline-dark"
-                        :href="`${loadRepo(obj.repo2)}`"
+                        :href="`${loadRepo(obj.repo2, obj.user2)}`"
                         ><i class="fab fa-github"></i> GitHub</b-button
                       >
                     </template>
@@ -177,7 +179,7 @@
                   </p>
                   <b-img
                     v-if="'repo3' in obj"
-                    :src="`${loadRepoStats(obj.repo3)}`"
+                    :src="`${loadRepoStats(obj.repo3, obj.user3)}`"
                     fluid
                     thumbnail
                   ></b-img>
@@ -192,7 +194,8 @@
                         variant="outline-dark"
                         class="m-md-2"
                       >
-                        <b-dropdown-item :href="`${loadRepo(obj.repo3)}`"
+                        <b-dropdown-item
+                          :href="`${loadRepo(obj.repo3, obj.user3)}`"
                           ><i class="fab fa-github"></i> GitHub</b-dropdown-item
                         >
                         <b-dropdown-item :href="obj.livelink3"
@@ -204,7 +207,7 @@
                     <template v-else-if="`repo3` in obj">
                       <b-button
                         variant="outline-dark"
-                        :href="`${loadRepo(obj.repo3)}`"
+                        :href="`${loadRepo(obj.repo3, obj.user3)}`"
                         ><i class="fab fa-github"></i> GitHub</b-button
                       >
                     </template>
@@ -219,7 +222,7 @@
                   </p>
                   <b-img
                     v-if="'repo4' in obj"
-                    :src="`${loadRepoStats(obj.repo4)}`"
+                    :src="`${loadRepoStats(obj.repo4, obj.user4)}`"
                     fluid
                     thumbnail
                   ></b-img>
@@ -234,7 +237,8 @@
                         variant="outline-dark"
                         class="m-md-2"
                       >
-                        <b-dropdown-item :href="`${loadRepo(obj.repo4)}`"
+                        <b-dropdown-item
+                          :href="`${loadRepo(obj.repo4, obj.user4)}`"
                           ><i class="fab fa-github"></i> GitHub</b-dropdown-item
                         >
                         <b-dropdown-item :href="obj.livelink4"
@@ -246,7 +250,7 @@
                     <template v-else-if="`repo4` in obj">
                       <b-button
                         variant="outline-dark"
-                        :href="`${loadRepo(obj.repo4)}`"
+                        :href="`${loadRepo(obj.repo4, obj.user)}`"
                         ><i class="fab fa-github"></i> GitHub</b-button
                       >
                     </template>
@@ -300,17 +304,21 @@ export default {
         // link: "Python/",
         caption: 'Python',
         desc: 'Twitter Bot',
-        repo1: 'abspen1/twitter-bot',
+        user1: 'abspen1',
+        repo1: 'twitter-bot',
         livelink1: '/twitter-bot/',
 
+        user2: 'abspen1',
         desc2: 'Algorithmic Trading',
-        repo2: 'abspen1/alpaca-python',
+        repo2: 'alpaca-python',
 
+        user3: 'abspen1',
         desc3: 'Pacman Game',
-        repo3: 'abspen1/PacMan-PyGame',
+        repo3: 'PacMan-PyGame',
 
+        user4: 'battle-of-the-states',
         desc4: 'Fantasy football league webpage and automated twitter account',
-        repo4: 'battle-of-the-states',
+        repo4: '',
         livelink4: '/BOTS-FFL/',
       },
       {
@@ -318,22 +326,27 @@ export default {
           'Go_(programming_language)/Go_(programming_language)-Logo.wine.svg',
         caption: 'Go',
         desc: 'My website back-end built with Go',
-        repo1: 'abspen1/go-backend',
+        user1: 'abspen1',
+        repo1: 'go-backend',
 
         desc2: 'Algorithmic Trading',
-        repo2: 'abspen1/go-trading-algo',
+        user2: 'abspen1',
+        repo2: 'go-trading-algo',
 
         desc3: 'Automated birthday emailer',
-        repo3: 'abspen1/bday-email',
+        user3: 'abspen1',
+        repo3: 'bday-email',
 
         desc4: 'Compressing messages with custom encoder',
-        repo4: 'abspen1/go-encode',
+        user4: 'abspen1',
+        repo4: 'go-encode',
       },
       {
         img: 'Vue.js/Vue.js-Logo.wine.svg',
         caption: 'Vue.js',
         desc: 'This website!',
-        repo1: 'abspen1/V2',
+        user1: 'abspen1',
+        repo1: 'V2',
       },
       {
         img: 'Node.js/Node.js-Logo.wine.svg',
@@ -341,26 +354,29 @@ export default {
 
         desc:
           'Rock Paper Scissors Game with back-end save data function, Repo is private but the live link is still working!',
-        repo1: 'abspen1/discord-bot',
+        user1: 'abspen1',
+        repo1: 'discord-bot',
         // livelink1: "/rps-js/",
 
         desc2: 'Hangman Game, my first JavaScript project',
-        repo2: 'abspen1/hangman-js',
+        user2: 'abspen1',
+        repo2: 'hangman-js',
         livelink2: '/hangman-js/',
 
         desc3: 'Website V1',
-        repo3: 'abspen1/abspen1.github.io',
+        user3: 'abspen1',
+        repo3: 'abspen1.github.io',
         livelink3: '/',
       },
       // {
       //   img: 'Redis/Redis-Logo.wine.svg',
       //   caption: 'Redis',
       //   desc: 'Twitter Bot',
-      //   repo1: 'abspen1/twitter-bot',
+      //   repo1: 'twitter-bot',
       //   livelink1: '/twitter-bot/',
 
       //   desc2: 'My website back-end built with Go',
-      //   repo2: 'abspen1/go-backend',
+      //   repo2: 'go-backend',
 
       //   desc3:
       //     'Most of my projects are built with Redis database. Check out more of my open-sourced projects on my GitHub!',
@@ -369,14 +385,14 @@ export default {
       //   img: 'Docker_(software)/Docker_(software)-Logo.wine.svg',
       //   caption: 'Docker',
       //   desc: 'Twitter Bot',
-      //   repo1: 'abspen1/twitter-bot',
+      //   repo1: 'twitter-bot',
       //   livelink1: '/twitter-bot/',
 
       //   desc2: 'My website back-end built with Go',
-      //   repo2: 'abspen1/go-backend',
+      //   repo2: 'go-backend',
 
       //   desc3: 'Demo of using Docker with several lanuages',
-      //   repo3: 'abspen1/docker-demo',
+      //   repo3: 'docker-demo',
       // },
       {
         img: 'Google_Cloud_Platform/Google_Cloud_Platform-Logo.wine.svg',
@@ -384,10 +400,12 @@ export default {
 
         desc:
           'Twitter Bot, implements Redis & Docker on Google Cloud VM Instance',
-        repo1: 'abspen1/twitter-bot',
+        user1: 'abspen1',
+        repo1: 'twitter-bot',
         livelink1: '/twitter-bot/',
 
         desc2: 'Battle of the States Fantasy Football League',
+        user2: 'abspen1',
         repo2: 'battle-of-the-states',
         livelink2: '/BOTS-FFL/',
       },
@@ -396,10 +414,12 @@ export default {
           'Java_(programming_language)/Java_(programming_language)-Logo.wine.svg',
         caption: 'Java',
         desc: 'Interactive coffee shop',
-        repo1: 'abspen1/coffee-shop',
+        user1: 'abspen1',
+        repo1: 'coffee-shop',
         livelink1: '/projects/java/demos/coffee/',
 
         desc2: 'Teacher attendance tracker GUI',
+        user2: 'abspen1',
         repo2: 'asu-cse-source-code/360-Final-Project',
         livelink2: '/projects/java/demos/gui/',
       },
@@ -407,9 +427,11 @@ export default {
         img: 'C%2B%2B/C%2B%2B-Logo.wine.svg',
         caption: 'C++',
         desc: 'Encoder/Decoder for txt file compression',
-        repo1: 'abspen1/cse-310-encode-decode',
+        user1: 'abspen1',
+        repo1: 'cse-310-encode-decode',
 
         desc2: 'Interactive App Store',
+        user2: 'battle-of-the-states',
         repo2: 'asu-cse-source-code/cse-310-app-store',
       },
     ],
@@ -436,12 +458,12 @@ export default {
     loadLink(linkPath) {
       return 'https://austinspencer.works/projects/' + linkPath
     },
-    loadRepo(repoPath) {
-      return 'https://github.com/' + repoPath
+    loadRepo(repoPath, user) {
+      return `https://github.com/${user}/` + repoPath
     },
-    loadRepoStats(repoPath) {
+    loadRepoStats(repoPath, user) {
       return (
-        'https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=' +
+        `https://github-readme-stats.vercel.app/api/pin/?username=${user}&repo=` +
         repoPath +
         '&theme=default_repocard'
       )
