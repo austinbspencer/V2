@@ -405,7 +405,7 @@ export default {
         livelink1: '/twitter-bot/',
 
         desc2: 'Battle of the States Fantasy Football League',
-        user2: 'abspen1',
+        user2: 'battle-of-the-states',
         repo2: 'battle-of-the-states',
         livelink2: '/BOTS-FFL/',
       },
@@ -419,20 +419,20 @@ export default {
         livelink1: '/projects/java/demos/coffee/',
 
         desc2: 'Teacher attendance tracker GUI',
-        user2: 'abspen1',
-        repo2: 'asu-cse-source-code/360-Final-Project',
+        user2: 'asu-cse-source-code',
+        repo2: '360-Final-Project',
         livelink2: '/projects/java/demos/gui/',
       },
       {
         img: 'C%2B%2B/C%2B%2B-Logo.wine.svg',
         caption: 'C++',
         desc: 'Encoder/Decoder for txt file compression',
-        user1: 'abspen1',
+        user1: 'asu-cse-source-code',
         repo1: 'cse-310-encode-decode',
 
         desc2: 'Interactive App Store',
-        user2: 'battle-of-the-states',
-        repo2: 'asu-cse-source-code/cse-310-app-store',
+        user2: 'asu-cse-source-code',
+        repo2: 'cse-310-app-store',
       },
     ],
     variant: 'white',
@@ -459,14 +459,10 @@ export default {
       return 'https://austinspencer.works/projects/' + linkPath
     },
     loadRepo(repoPath, user) {
-      return `https://github.com/${user}/` + repoPath
+      return `https://github.com/${user}/${repoPath}`
     },
     loadRepoStats(repoPath, user) {
-      return (
-        `https://github-readme-stats.vercel.app/api/pin/?username=${user}&repo=` +
-        repoPath +
-        '&theme=default_repocard'
-      )
+      return `https://github-readme-stats.vercel.app/api/pin/?username=${user}&repo=${repoPath}&theme=default_repocard`
     },
   },
 }
