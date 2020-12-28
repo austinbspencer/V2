@@ -19,7 +19,7 @@
     <b-row align-v="center">
       <b-col md="4" v-for="(obj, key) in portfolioJSON" :key="key">
         <b-card
-          :img-src="`${loadImg(obj.img)}`"
+          :img-src="obj.img"
           img-alt="Job-info"
           img-top
           tag="article"
@@ -292,15 +292,15 @@
 
 <script>
 // @ is an alias to /src
+const logoURL = 'https://www.logo.wine/a/logo/'
 
 export default {
-  name: 'Home',
+  name: 'Projects',
   components: {},
   data: () => ({
     portfolioJSON: [
       {
-        img:
-          'Python_(programming_language)/Python_(programming_language)-Logo.wine.svg',
+        img: `${logoURL}Python_(programming_language)/Python_(programming_language)-Logo.wine.svg`,
         // link: "Python/",
         caption: 'Python',
         desc: 'Twitter Bot',
@@ -322,8 +322,7 @@ export default {
         livelink4: '/BOTS-FFL/',
       },
       {
-        img:
-          'Go_(programming_language)/Go_(programming_language)-Logo.wine.svg',
+        img: `${logoURL}Go_(programming_language)/Go_(programming_language)-Logo.wine.svg`,
         caption: 'Go',
         desc: 'My website back-end built with Go',
         user1: 'abspen1',
@@ -342,14 +341,14 @@ export default {
         repo4: 'go-encode',
       },
       {
-        img: 'Vue.js/Vue.js-Logo.wine.svg',
+        img: `${logoURL}Vue.js/Vue.js-Logo.wine.svg`,
         caption: 'Vue.js',
         desc: 'This website!',
         user1: 'abspen1',
         repo1: 'V2',
       },
       {
-        img: 'Node.js/Node.js-Logo.wine.svg',
+        img: `${logoURL}Node.js/Node.js-Logo.wine.svg`,
         caption: 'JavaScript Projects',
 
         desc:
@@ -381,21 +380,24 @@ export default {
       //   desc3:
       //     'Most of my projects are built with Redis database. Check out more of my open-sourced projects on my GitHub!',
       // },
-      // {
-      //   img: 'Docker_(software)/Docker_(software)-Logo.wine.svg',
-      //   caption: 'Docker',
-      //   desc: 'Twitter Bot',
-      //   repo1: 'twitter-bot',
-      //   livelink1: '/twitter-bot/',
-
-      //   desc2: 'My website back-end built with Go',
-      //   repo2: 'go-backend',
-
-      //   desc3: 'Demo of using Docker with several lanuages',
-      //   repo3: 'docker-demo',
-      // },
       {
-        img: 'Google_Cloud_Platform/Google_Cloud_Platform-Logo.wine.svg',
+        img: `https://1000logos.net/wp-content/uploads/2017/08/ASU-Logo.png`,
+        caption: 'Source code for most of my school projects at ASU/MCC/CGCC',
+        desc:
+          'Encoder and decoder built in C++, this is my favorite school project so far.',
+        user1: 'asu-cse-source-code',
+        repo1: 'cse-310-encode-decode',
+
+        desc2: 'All, ~15, projects from OOP Java Course at MCC',
+        user2: 'asu-cse-source-code',
+        repo2: 'csc-205-object-oriented-programming',
+
+        desc3: 'Pacman-type game with limited ability',
+        user3: 'asu-cse-source-code',
+        repo3: 'mat-243-pacman-pygame',
+      },
+      {
+        img: `${logoURL}Google_Cloud_Platform/Google_Cloud_Platform-Logo.wine.svg`,
         caption: 'Current Project',
 
         desc:
@@ -410,8 +412,7 @@ export default {
         livelink2: '/BOTS-FFL/',
       },
       {
-        img:
-          'Java_(programming_language)/Java_(programming_language)-Logo.wine.svg',
+        img: `${logoURL}Java_(programming_language)/Java_(programming_language)-Logo.wine.svg`,
         caption: 'Java',
         desc: 'Interactive coffee shop',
         user1: 'abspen1',
@@ -424,7 +425,7 @@ export default {
         livelink2: '/projects/java/demos/gui/',
       },
       {
-        img: 'C%2B%2B/C%2B%2B-Logo.wine.svg',
+        img: `${logoURL}C%2B%2B/C%2B%2B-Logo.wine.svg`,
         caption: 'C++',
         desc: 'Encoder/Decoder for txt file compression',
         user1: 'asu-cse-source-code',
@@ -452,9 +453,9 @@ export default {
     sizes: ['sm', 'md', 'lg', 'xl'],
   }),
   methods: {
-    loadImg(imgPath) {
-      return 'https://www.logo.wine/a/logo/' + imgPath
-    },
+    // loadImg(imgPath) {
+    //   return imgPath
+    // },
     loadLink(linkPath) {
       return 'https://austinspencer.works/projects/' + linkPath
     },
