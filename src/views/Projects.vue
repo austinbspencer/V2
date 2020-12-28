@@ -290,163 +290,164 @@
 // @ is an alias to /src
 
 export default {
-  name: "Home",
+  name: 'Home',
   components: {},
   data: () => ({
     portfolioJSON: [
       {
         img:
-          "Python_(programming_language)/Python_(programming_language)-Logo.wine.svg",
+          'Python_(programming_language)/Python_(programming_language)-Logo.wine.svg',
         // link: "Python/",
-        caption: "Python",
-        desc: "Twitter Bot",
-        repo1: "twitter-bot",
-        livelink1: "/twitter-bot/",
+        caption: 'Python',
+        desc: 'Twitter Bot',
+        repo1: 'abspen1/twitter-bot',
+        livelink1: '/twitter-bot/',
 
-        desc2: "Algorithmic Trading",
-        repo2: "alpaca-python",
+        desc2: 'Algorithmic Trading',
+        repo2: 'abspen1/alpaca-python',
 
-        desc3: "Pacman Game",
-        repo3: "PacMan-PyGame",
+        desc3: 'Pacman Game',
+        repo3: 'abspen1/PacMan-PyGame',
 
-        desc4: "Fantasy football league webpage and automated twitter account",
-        repo4: "BOTS-FFL",
-        livelink4: "/BOTS-FFL/"
+        desc4: 'Fantasy football league webpage and automated twitter account',
+        repo4: 'battle-of-the-states',
+        livelink4: '/BOTS-FFL/',
       },
       {
         img:
-          "Go_(programming_language)/Go_(programming_language)-Logo.wine.svg",
-        caption: "Go",
-        desc: "My website back-end built with Go",
-        repo1: "go-backend",
+          'Go_(programming_language)/Go_(programming_language)-Logo.wine.svg',
+        caption: 'Go',
+        desc: 'My website back-end built with Go',
+        repo1: 'abspen1/go-backend',
 
-        desc2: "Algorithmic Trading",
-        repo2: "go-trading-algo",
+        desc2: 'Algorithmic Trading',
+        repo2: 'abspen1/go-trading-algo',
 
-        desc3: "Automated birthday emailer",
-        repo3: "bday-email",
+        desc3: 'Automated birthday emailer',
+        repo3: 'abspen1/bday-email',
 
-        desc4: "Compressing messages with custom encoder",
-        repo4: "go-encode"
+        desc4: 'Compressing messages with custom encoder',
+        repo4: 'abspen1/go-encode',
       },
       {
-        img: "Vue.js/Vue.js-Logo.wine.svg",
-        caption: "Vue.js",
-        desc: "This website!",
-        repo1: "V2"
+        img: 'Vue.js/Vue.js-Logo.wine.svg',
+        caption: 'Vue.js',
+        desc: 'This website!',
+        repo1: 'abspen1/V2',
       },
       {
-        img: "Node.js/Node.js-Logo.wine.svg",
-        caption: "JavaScript Projects",
-
-        desc: "Rock Paper Scissors Game with back-end save data function, Repo is private but the live link is still working!",
-        repo1: "rps-js",
-        livelink1: "/rps-js/",
-
-        desc2: "Hangman Game, my first JavaScript project",
-        repo2: "hangman-js",
-        livelink2: "/hangman-js/",
-
-        desc3: "Website V1",
-        repo3: "abspen1.github.io",
-        livelink3: "/"
-      },
-      {
-        img: "Redis/Redis-Logo.wine.svg",
-        caption: "Redis",
-        desc: "Twitter Bot",
-        repo1: "twitter-bot",
-        livelink1: "/twitter-bot/",
-
-        desc2: "My website back-end built with Go",
-        repo2: "go-backend",
-
-        desc3:
-          "Most of my projects are built with Redis database. Check out more of my open-sourced projects on my GitHub!"
-      },
-      {
-        img: "Docker_(software)/Docker_(software)-Logo.wine.svg",
-        caption: "Docker",
-        desc: "Twitter Bot",
-        repo1: "twitter-bot",
-        livelink1: "/twitter-bot/",
-
-        desc2: "My website back-end built with Go",
-        repo2: "go-backend",
-
-        desc3: "Demo of using Docker with several lanuages",
-        repo3: "docker-demo"
-      },
-      {
-        img: "Google_Cloud_Platform/Google_Cloud_Platform-Logo.wine.svg",
-        caption: "Current Project",
+        img: 'Node.js/Node.js-Logo.wine.svg',
+        caption: 'JavaScript Projects',
 
         desc:
-          "Twitter Bot, implements Redis & Docker on Google Cloud VM Instance",
-        repo1: "twitter-bot",
-        livelink1: "/twitter-bot/",
+          'Rock Paper Scissors Game with back-end save data function, Repo is private but the live link is still working!',
+        repo1: 'abspen1/discord-bot',
+        // livelink1: "/rps-js/",
 
-        desc2: "Battle of the States Fantasy Football League",
-        repo2: "BOTS-FFL",
-        livelink2: "/BOTS-FFL/"
+        desc2: 'Hangman Game, my first JavaScript project',
+        repo2: 'abspen1/hangman-js',
+        livelink2: '/hangman-js/',
+
+        desc3: 'Website V1',
+        repo3: 'abspen1/abspen1.github.io',
+        livelink3: '/',
+      },
+      // {
+      //   img: 'Redis/Redis-Logo.wine.svg',
+      //   caption: 'Redis',
+      //   desc: 'Twitter Bot',
+      //   repo1: 'abspen1/twitter-bot',
+      //   livelink1: '/twitter-bot/',
+
+      //   desc2: 'My website back-end built with Go',
+      //   repo2: 'abspen1/go-backend',
+
+      //   desc3:
+      //     'Most of my projects are built with Redis database. Check out more of my open-sourced projects on my GitHub!',
+      // },
+      // {
+      //   img: 'Docker_(software)/Docker_(software)-Logo.wine.svg',
+      //   caption: 'Docker',
+      //   desc: 'Twitter Bot',
+      //   repo1: 'abspen1/twitter-bot',
+      //   livelink1: '/twitter-bot/',
+
+      //   desc2: 'My website back-end built with Go',
+      //   repo2: 'abspen1/go-backend',
+
+      //   desc3: 'Demo of using Docker with several lanuages',
+      //   repo3: 'abspen1/docker-demo',
+      // },
+      {
+        img: 'Google_Cloud_Platform/Google_Cloud_Platform-Logo.wine.svg',
+        caption: 'Current Project',
+
+        desc:
+          'Twitter Bot, implements Redis & Docker on Google Cloud VM Instance',
+        repo1: 'abspen1/twitter-bot',
+        livelink1: '/twitter-bot/',
+
+        desc2: 'Battle of the States Fantasy Football League',
+        repo2: 'battle-of-the-states',
+        livelink2: '/BOTS-FFL/',
       },
       {
         img:
-          "Java_(programming_language)/Java_(programming_language)-Logo.wine.svg",
-        caption: "Java",
-        desc: "Interactive coffee shop",
-        repo1: "coffee-shop",
-        livelink1: "/projects/java/demos/coffee/",
+          'Java_(programming_language)/Java_(programming_language)-Logo.wine.svg',
+        caption: 'Java',
+        desc: 'Interactive coffee shop',
+        repo1: 'abspen1/coffee-shop',
+        livelink1: '/projects/java/demos/coffee/',
 
-        desc2: "Teacher attendance tracker GUI",
-        repo2: "360-Final-Project",
-        livelink2: "/projects/java/demos/gui/"
+        desc2: 'Teacher attendance tracker GUI',
+        repo2: 'asu-cse-source-code/360-Final-Project',
+        livelink2: '/projects/java/demos/gui/',
       },
       {
-        img: "C%2B%2B/C%2B%2B-Logo.wine.svg",
-        caption: "C++",
-        desc: "Encoder/Decoder for txt file compression",
-        repo1: "cse-310-encode-decode",
+        img: 'C%2B%2B/C%2B%2B-Logo.wine.svg',
+        caption: 'C++',
+        desc: 'Encoder/Decoder for txt file compression',
+        repo1: 'abspen1/cse-310-encode-decode',
 
-        desc2: "Interactive App Store",
-        repo2: "cse-310-app-store"
-      }
+        desc2: 'Interactive App Store',
+        repo2: 'asu-cse-source-code/cse-310-app-store',
+      },
     ],
-    variant: "white",
-    primary: "primary",
+    variant: 'white',
+    primary: 'primary',
     variants: [
-      "white",
-      "light",
-      "dark",
-      "primary",
-      "secondary",
-      "success",
-      "danger",
-      "warning",
-      "info"
+      'white',
+      'light',
+      'dark',
+      'primary',
+      'secondary',
+      'success',
+      'danger',
+      'warning',
+      'info',
     ],
-    size: "lg",
-    sizes: ["sm", "md", "lg", "xl"]
+    size: 'lg',
+    sizes: ['sm', 'md', 'lg', 'xl'],
   }),
   methods: {
     loadImg(imgPath) {
-      return "https://www.logo.wine/a/logo/" + imgPath;
+      return 'https://www.logo.wine/a/logo/' + imgPath
     },
     loadLink(linkPath) {
-      return "https://austinspencer.works/projects/" + linkPath;
+      return 'https://austinspencer.works/projects/' + linkPath
     },
     loadRepo(repoPath) {
-      return "https://github.com/abspen1/" + repoPath;
+      return 'https://github.com/' + repoPath
     },
     loadRepoStats(repoPath) {
       return (
-        "https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=" +
+        'https://github-readme-stats.vercel.app/api/pin/?username=abspen1&repo=' +
         repoPath +
-        "&theme=default_repocard"
-      );
-    }
-  }
-};
+        '&theme=default_repocard'
+      )
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
