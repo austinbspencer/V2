@@ -10,7 +10,7 @@
       <b-navbar-brand>
         <b-row>
           <b-col cols="4" id="brand" v-b-tooltip.hover title="GitHub">
-            <a href="https://github.com/abspen1"
+            <a href="https://github.com/austinbspencer"
               ><i class="fab fa-github"></i>&emsp;</a
             >
             <span>&emsp;</span>
@@ -52,7 +52,7 @@
           <b-nav-item-dropdown text="Social" right>
             <b-dropdown-item
               variant="info"
-              href="https://twitter.com/austinnspencer"
+              href="https://twitter.com/austinbspencer"
               ><i class="fab fa-twitter"> Twitter</i></b-dropdown-item
             >
             <b-dropdown-item

@@ -105,7 +105,7 @@
                   size="md"
                   variant="outline-dark"
                   class="float-left"
-                  href="https://github.com/abspen1"
+                  href="https://github.com/austinbspencer"
                 >
                   GitHub
                 </b-button>
@@ -144,7 +144,7 @@
                   size="md"
                   variant="outline-dark"
                   class="float-left"
-                  href="https://github.com/abspen1/Fantasy-Twitter"
+                  href="https://github.com/austinbspencer/Fantasy-Twitter"
                 >
                   GitHub
                 </b-button>

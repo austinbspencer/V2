@@ -266,7 +266,7 @@
                     size="sm"
                     variant="dark"
                     class="float-left"
-                    href="https://github.com/abspen1"
+                    href="https://github.com/austinbspencer"
                     ><i class="fab fa-github"></i> GitHub</b-button
                   >
                   <!-- Emulate built in modal footer ok and cancel button actions -->
@@ -304,15 +304,15 @@ export default {
         // link: "Python/",
         caption: 'Python',
         desc: 'Twitter Bot',
-        user1: 'abspen1',
+        user1: 'austinbspencer',
         repo1: 'twitter-bot',
         livelink1: '/twitter-bot/',
 
-        user2: 'abspen1',
+        user2: 'austinbspencer',
         desc2: 'Algorithmic Trading',
         repo2: 'alpaca-python',
 
-        user3: 'abspen1',
+        user3: 'austinbspencer',
         desc3: 'Pacman Game',
         repo3: 'PacMan-PyGame',
 
@@ -325,26 +325,26 @@ export default {
         img: `${logoURL}Go_(programming_language)/Go_(programming_language)-Logo.wine.svg`,
         caption: 'Go',
         desc: 'My website back-end built with Go',
-        user1: 'abspen1',
+        user1: 'austinbspencer',
         repo1: 'go-backend',
 
         desc2: 'Algorithmic Trading',
-        user2: 'abspen1',
+        user2: 'austinbspencer',
         repo2: 'go-trading-algo',
 
         desc3: 'Automated birthday emailer',
-        user3: 'abspen1',
+        user3: 'austinbspencer',
         repo3: 'bday-email',
 
         desc4: 'Compressing messages with custom encoder',
-        user4: 'abspen1',
+        user4: 'austinbspencer',
         repo4: 'go-encode',
       },
       {
         img: `${logoURL}Vue.js/Vue.js-Logo.wine.svg`,
         caption: 'Vue.js',
         desc: 'This website!',
-        user1: 'abspen1',
+        user1: 'austinbspencer',
         repo1: 'V2',
       },
       {
@@ -353,18 +353,18 @@ export default {
 
         desc:
           'Rock Paper Scissors Game with back-end save data function, Repo is private but the live link is still working!',
-        user1: 'abspen1',
+        user1: 'austinbspencer',
         repo1: 'discord-bot',
         // livelink1: "/rps-js/",
 
         desc2: 'Hangman Game, my first JavaScript project',
-        user2: 'abspen1',
+        user2: 'austinbspencer',
         repo2: 'hangman-js',
         livelink2: '/hangman-js/',
 
         desc3: 'Website V1',
-        user3: 'abspen1',
-        repo3: 'abspen1.github.io',
+        user3: 'austinbspencer',
+        repo3: 'austinbspencer.github.io',
         livelink3: '/',
       },
       // {
@@ -402,7 +402,7 @@ export default {
 
         desc:
           'Twitter Bot, implements Redis & Docker on Google Cloud VM Instance',
-        user1: 'abspen1',
+        user1: 'austinbspencer',
         repo1: 'twitter-bot',
         livelink1: '/twitter-bot/',
 
@@ -415,7 +415,7 @@ export default {
         img: `${logoURL}Java_(programming_language)/Java_(programming_language)-Logo.wine.svg`,
         caption: 'Java',
         desc: 'Interactive coffee shop',
-        user1: 'abspen1',
+        user1: 'austinbspencer',
         repo1: 'coffee-shop',
         livelink1: '/projects/java/demos/coffee/',
 
